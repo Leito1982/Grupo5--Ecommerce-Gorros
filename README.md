@@ -9,7 +9,7 @@ La forma en la cual vamos a realizar la segmentación del producto va a ser por 
 El equipo esta conformado por 
 
 Leonardo Otal:
-Emiliano Torres:
+Emiliano Torres: Toca el piano, le gusta la música, la tecnología y viajar. Vive en Coghlan
 Felix Doura: quien es hincha de River, le gusta la musica rock y vive en Nuñez.
 Nicolas Gomez:
 Franco Rodriguez:
