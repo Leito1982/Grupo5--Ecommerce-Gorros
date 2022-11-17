@@ -11,7 +11,7 @@ El equipo esta conformado por
 Leonardo Otal:
 Emiliano Torres: Toca el piano, le gusta la música, la tecnología y viajar. Vive en Coghlan
 Felix Doura: quien es hincha de River, le gusta la musica rock y vive en Nuñez.
-Nicolas Gomez:
+Nicolas Gomez: Emprendedor, melomano, amo viajar, curioso de la vida
 Franco Rodriguez:
 
 Nuestras inspiraciones y referentes son: 
