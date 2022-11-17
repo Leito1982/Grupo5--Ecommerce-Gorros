@@ -15,10 +15,10 @@ Nicolas Gomez:
 Franco Rodriguez:
 
 Nuestras inspiraciones y referentes son: 
-- Mercado Libre
-- Dafiti
-- Nike
-- Adidas
+- Mercado Libre (https://www.mercadolibre.com.ar/)
+- Dafiti (https://www.dafiti.com.ar/)
+- Nike (https://www.nike.com/ar/)
+- Adidas (https://www.adidas.com.ar/)
 - Capshop (https://capshop.com.ar)
 - Gooringbros (https://www.goorinbros.com.ar/)
 
