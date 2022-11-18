@@ -8,11 +8,11 @@ La forma en la cual vamos a realizar la segmentación del producto va a ser por 
 
 El equipo esta conformado por 
 
-Leonardo Otal: Hincha de Velez, hincha del futbol, vive en ciudadela, me gusta viajar en avion.
-Emiliano Torres: Toca el piano, le gusta la música, la tecnología y viajar. Vive en Coghlan
-Felix Doura: quien es hincha de River, le gusta la musica rock y vive en Nuñez.
-Nicolas Gomez: Emprendedor, melomano, amo viajar, curioso de la vida
-Franco Rodriguez:
+- Leonardo Otal: Hincha de Velez, hincha del futbol, vive en ciudadela, me gusta viajar en avion.
+- Emiliano Torres: Toca el piano, le gusta la música, la tecnología y viajar. Vive en Coghlan
+- Felix Doura: quien es hincha de River, le gusta la musica rock y vive en Nuñez.
+- Nicolas Gomez: Emprendedor, melomano, amo viajar, curioso de la vida
+- Franco Rodriguez:
 
 Nuestras inspiraciones y referentes son: 
 - Mercado Libre (https://www.mercadolibre.com.ar/)
