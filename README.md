@@ -12,7 +12,7 @@ El equipo esta conformado por
 - Emiliano Torres: Toca el piano, le gusta la música, la tecnología y viajar. Vive en Coghlan
 - Felix Doura: quien es hincha de River, le gusta la musica rock y vive en Nuñez.
 - Nicolas Gomez: Emprendedor, melomano, amo viajar, curioso de la vida
-- Franco Rodriguez:
+- Franco Rodriguez: Toca la guitarra, me gusta viajar y Vivo en Pilar.
 
 Nuestras inspiraciones y referentes son: 
 - Mercado Libre (https://www.mercadolibre.com.ar/)
