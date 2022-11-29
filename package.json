@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-integrador",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leito1982/Grupo5--Ecommerce-Gorros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leito1982/Grupo5--Ecommerce-Gorros/issues"
+  },
+  "homepage": "https://github.com/Leito1982/Grupo5--Ecommerce-Gorros#readme"
+}
