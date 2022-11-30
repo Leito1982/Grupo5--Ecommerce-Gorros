@@ -1,6 +1,8 @@
 /* Fuentes */
 
+/* Fuente Rubik para usar en puntos particulares del proyecto */
+/* font-family: 'Rubik Distressed', cursive; */
+
 body{
 font-family: 'Roboto Slab', serif;
-font-family: 'Rubik Distressed', cursive;
 }
