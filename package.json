@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Leito1982/Grupo5--Ecommerce-Gorros/issues"
   },
-  "homepage": "https://github.com/Leito1982/Grupo5--Ecommerce-Gorros#readme"
+  "homepage": "https://github.com/Leito1982/Grupo5--Ecommerce-Gorros#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
