@@ -22,3 +22,6 @@ Nuestras inspiraciones y referentes son:
 - Capshop (https://capshop.com.ar)
 - Gooringbros (https://www.goorinbros.com.ar/)
 
+Link al tablero de trabajo:
+https://trello.com/invite/b/maf2FT9i/ATTI4fe258dc24d070ce52f001d882a9fe5e1283803F/e-commerce-gorras
+
