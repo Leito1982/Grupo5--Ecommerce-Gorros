@@ -6,3 +6,18 @@
 body{
 font-family: 'Roboto Slab', serif;
 }
+
+.header-style{
+    background-color: blue;
+    height: 60px;
+}
+
+.search-bar-box{
+    border-radius: 12px;
+}
+
+.burger-button{
+    border: none;
+    background-color: blueviolet;
+    border-radius: 12px;
+}
