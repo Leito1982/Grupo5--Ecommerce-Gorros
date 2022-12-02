@@ -9,15 +9,22 @@ font-family: 'Roboto Slab', serif;
 
 .header-style{
     background-color: blue;
-    height: 60px;
+    height: 70px;
 }
 
-.search-bar-box{
+.search-bar-container{
     border-radius: 12px;
 }
 
-.burger-button{
+.burger-menu{
     border: none;
     background-color: blueviolet;
     border-radius: 12px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.text{
+    color: red;
 }
