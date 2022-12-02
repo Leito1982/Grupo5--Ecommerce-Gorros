@@ -13,17 +13,34 @@ font-family: 'Roboto Slab', serif;
 }
 
 .search-bar-container{
-    border-radius: 12px;
+    display: inline;
+    float: left;
+    border: solid black 1px;
+    margin-top: 2%;
 }
 
 .burger-menu{
+    display: inline;
+    float: right;
     border: none;
     background-color: blueviolet;
     border-radius: 12px;
     height: 30px;
     width: 30px;
+    margin-right: 8%;
+    margin-top: 2%
 }
-
+.cart{
+    display: inline;
+    float: right;
+    border: none;
+    background-color: blueviolet;
+    border-radius: 12px;
+    height: 30px;
+    width: 30px;
+    margin-right: 2%;
+    margin-top: 2%
+}
 
 .text{
     color: red;
