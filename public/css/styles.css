@@ -88,12 +88,14 @@ nav{
 }
 .info-producto{
     text-align: center;
+    margin: 3%;
 }
 .imagen-principal{
+    display: flex;
     height: 45%;
     width: 45%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 25%;
+
 }
 .imagen001{
     width: 100%;
@@ -102,13 +104,14 @@ nav{
     border-radius: 50%;
     padding: 6%;
     margin: 4%;
+    box-sizing: border-box;
 }
 .imagenes-secundarias{
     height: 20%;
     width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-left: 13%;
+    box-sizing: border-box;
+    display: flex;
 }
 .imagen002{
     width: 100%;
@@ -133,4 +136,44 @@ nav{
     border-radius: 50%;
     padding: 4%;
     margin: 4%;
+}
+.precio{
+    text-align: center;
+}
+.cuotas{
+    text-align: center;
+}
+.metodos-de-pago{
+    text-align: center;
+}
+.tarjetas{
+    text-align: center;
+}
+
+.checkout{
+    display: flex;
+}
+.agregar-al-carrito{
+    height: 40px;
+    width: 120px;
+    background-color: aqua;
+    border: solid black 1px;
+    padding: 4px;
+    margin-right: auto;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 6%;
+    text-align: center;
+}
+.comprar{
+    height: 40px;
+    width: 120px;
+    background-color: aqua;
+    border: solid black 1px;
+    padding: 4px;
+    margin-right: 6%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: auto;
+    text-align: center;
 }
