@@ -26,6 +26,7 @@ font-family: 'Roboto Slab', serif;
     background-color: var(--secundario);
     align-items: center;
     display: flex;
+    text-align: justify;
 }
 nav{
     display: none;
@@ -51,11 +52,6 @@ nav{
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-}
-
-.burger-cart-box{
-    display: flex;
-    position: relative;
 }
 
 .burger-container{
@@ -85,7 +81,7 @@ nav{
 }
 
 .footer-style{
-    background-color: var(--violeta);
+    background-color: var(--terciario);
     color: white;
     padding-top: 4%;
     padding-bottom: 4%;
