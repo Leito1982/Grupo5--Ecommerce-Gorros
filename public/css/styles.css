@@ -3,6 +3,10 @@
 /* Fuente Rubik para usar en puntos particulares del proyecto */
 /* font-family: 'Rubik Distressed', cursive; */
 
+* {
+    box-sizing: border-box;
+}
+
 :root{
     --primario: #faf3e3;
     --secundario: #ff9f29;
@@ -71,11 +75,11 @@ nav{
     border-radius: 12px;
     height: 25px;
     width: 25px;
+    text-align: center;
+    justify-items: center;
+    padding-top: 4px;
+    
 
-}
-
-.cart{
-    margin-top: 3px;
 }
 
 .text{
@@ -111,8 +115,38 @@ nav{
 
 
 /* HOME */
+.carrousel {
+    background-color: aqua;
+    overflow: hidden;
 
+}
 
+.tarjeta-carrousel {
+    position: relative;
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    animation-name: mueve-carrousel;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}
+.tarjeta-carrousel img {
+    width: calc(100% / 3);
+    max-height: 150px;
+}
+
+@keyframes mueve-carrousel {
+    0% {right: 0px;}
+    30% {right: 0px;}
+
+    35% {right: 100%;}
+    65% {right: 100%;}
+
+    70% {right: 200%;}
+    100% {right: 200%;}
+}
 
 /* CARRITO DE COMPRAS */
 
