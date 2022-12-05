@@ -4,10 +4,18 @@
 /* font-family: 'Rubik Distressed', cursive; */
 
 :root{
-    --primario: red;
-    --secundario: blue;
-    --terciario: yellow;
-    --cuarto: green;
+    --primario: #faf3e3;
+    --secundario: #ff9f29;
+    --terciario: #1a4d2e;
+
+    --negro: black;
+    --blanco: white;
+    --rojo: red;
+    --azul: blue;
+    --amarillo: yellow;
+    --verde: green;
+    --naranja: orange;
+    --violeta: violet;
 }
 
 body{
@@ -72,7 +80,7 @@ nav{
     padding-bottom: 4%;
     padding-left: 2%;
     padding-right: 2%;
-    
+
 }
 .derechos{
     font-size: 9px;
