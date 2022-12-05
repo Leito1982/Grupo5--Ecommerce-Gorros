@@ -24,9 +24,8 @@ font-family: 'Roboto Slab', serif;
 
 .header-style{
     background-color: var(--secundario);
-    display: flex;
     align-items: center;
-    justify-content: space-around;
+    display: flex;
 }
 nav{
     display: none;
@@ -40,13 +39,26 @@ nav{
 }
 
 .search-bar-box{
-
-    border: solid black 1px;
-    border-radius: 14px;
-
+    vertical-align: middle;
+    position: relative;
+    width: 300px;
+}
+.search-bar-container{
+    width: 300px;
+    float: left;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
-.burger-menu{
+.burger-cart-box{
+    display: flex;
+    position: relative;
+}
+
+.burger-container{
 
     border: none;
     background-color: blueviolet;
@@ -120,6 +132,7 @@ nav{
 
 .main-style{
     background-color: var(--primario);
+    padding-top: 2%;
 }
 
 .nombre-producto{
