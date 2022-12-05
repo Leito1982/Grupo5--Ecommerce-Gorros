@@ -39,10 +39,9 @@ nav{
     padding: 5px;
 }
 
-.search-bar-container{
+.search-bar-box{
 
     border: solid black 1px;
-
     border-radius: 14px;
 
 }
@@ -192,7 +191,7 @@ nav{
 .agregar-al-carrito{
     height: 40px;
     width: 120px;
-    background-color: aqua;
+    background-color: var(--secundario);
     border: solid black 1px;
     padding: 4px;
     margin-right: auto;
@@ -204,7 +203,7 @@ nav{
 .comprar{
     height: 40px;
     width: 120px;
-    background-color: aqua;
+    background-color: var(--secundario);
     border: solid black 1px;
     padding: 4px;
     margin-right: 6%;
