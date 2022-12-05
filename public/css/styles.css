@@ -23,10 +23,11 @@ font-family: 'Roboto Slab', serif;
 }
 
 .header-style{
+    display: flex;
     background-color: var(--secundario);
     align-items: center;
-    display: flex;
-    text-align: justify;
+
+    
 }
 nav{
     display: none;
@@ -42,11 +43,12 @@ nav{
 .search-bar-box{
     vertical-align: middle;
     position: relative;
-    width: 300px;
+    width: 50%;
+    display: flex;
 }
 .search-bar-container{
-    width: 300px;
-    float: left;
+
+    width: 100%;
     border: none;
     font-size: 14px;
     border-radius: 5px;
