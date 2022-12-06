@@ -1,0 +1,81 @@
+* {
+    /* margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    text-align: center;
+    /* border: solid; */
+}
+
+:root {
+    --primario: #faf3e3;
+    --secundario: #ff9f29;
+    --terciario: #1a4d2e;
+
+    --negro: black;
+    --blanco: white;
+    --rojo: red;
+    --azul: blue;
+    --amarillo: yellow;
+    --verde: green;
+    --naranja: orange;
+    --violeta: violet;
+}
+
+body {
+    background-color: var(--primario);
+    font-family: 'Roboto Slab', serif;
+}
+
+.nav-celular {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secundario);
+    padding: 5px;
+}
+
+.muestra {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+}
+
+.imagen1,
+.imagen2,
+.imagen3 {
+    width: 30%;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.logo-celular {
+    width: 10%;
+    border: solid black 2px;
+    border-radius: 50%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingresar,
+.registrarse {
+    width: 100px;
+    margin: 10px;
+}
+
+.footer-style {
+    display: flex;
+    background-color: var(--terciario);
+    color: white;
+    justify-content: space-around;
+    padding: 3px;
+
+}
