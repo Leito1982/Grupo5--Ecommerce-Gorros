@@ -132,8 +132,11 @@ nav{
 
 
 /* HOME */
+.body-home {
+    background-color: black;
+}
 .carrousel {
-    background-color: aqua;
+    background-color: gray;
     overflow: hidden;
 
 }
@@ -148,10 +151,55 @@ nav{
     animation-name: mueve-carrousel;
     animation-duration: 15s;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .tarjeta-carrousel img {
     width: calc(100% / 3);
-    max-height: 150px;
+    height: 80px;
+}
+
+.tarjetas-producto {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tarjetas-producto article {
+    background-color: #faf3e3;
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+    
+}
+
+.tarjetas-producto article img {
+    border-radius: 50%;
+    width: 50%;
+    padding-top: 10px;
+    filter: drop-shadow(6px 6px 3px #ff9f29);
+    
+}
+
+.tarjetas-producto article div {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+   
+}
+
+.tarjetas-producto article div p {
+    font-size: 14px;
+    margin: 0px;
+}
+
+.personalizar {
+    background-image: url(/images/descargar.jpeg);
+    font-size: 14px;
+}
+.botones {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
 }
 
 @keyframes mueve-carrousel {
@@ -163,6 +211,10 @@ nav{
 
     70% {right: 200%;}
     100% {right: 200%;}
+}
+
+.tarjetas-producto article img:hover {
+    transform: scale(1.1);
 }
 
 /* CARRITO DE COMPRAS */
