@@ -132,92 +132,6 @@ nav{
 
 
 /* HOME */
-.body-home {
-    background-color: #faf3e3;
-}
-.carrousel {
-    background-color: gray;
-    overflow: hidden;
-
-}
-
-.tarjeta-carrousel {
-    position: relative;
-    width: 300%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    animation-name: mueve-carrousel;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-.tarjeta-carrousel img {
-    width: calc(100% / 3);
-    height: 80px;
-}
-
-.tarjetas-producto {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.tarjetas-producto article {
-    background-color: #faf3e3;
-    width: 45%;
-    text-align: center;
-    margin: 10px;
-    border-radius: 8px;
-    
-}
-
-.tarjetas-producto article img {
-    border-radius: 50%;
-    width: 50%;
-    padding-top: 10px;
-    filter: drop-shadow(6px 6px 3px #ff9f29);
-    transition: all 0.5s;
-    
-}
-
-.tarjetas-producto article div {
-    margin-top: 10px;
-    padding-top: 10px;
-    margin-bottom: 10px;
-   
-}
-
-.tarjetas-producto article div p {
-    font-size: 14px;
-    margin: 0px;
-}
-
-.personalizar {
-    background-image: url(/images/descargar.jpeg);
-    font-size: 14px;
-}
-.botones {
-    display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-}
-
-@keyframes mueve-carrousel {
-    0% {right: 0px;}
-    30% {right: 0px;}
-
-    35% {right: 100%;}
-    65% {right: 100%;}
-
-    70% {right: 200%;}
-    100% {right: 200%;}
-}
-
-.tarjetas-producto article img:hover {
-   transform: rotate(0.05turn) scale(1.1);
-    
-}
 
 /* CARRITO DE COMPRAS */
 
@@ -235,31 +149,32 @@ nav{
 .tarjetas-producto article div p {
     font-size: 14px;
     margin: 0px;
+}
 
-    .tarjeta-carrousel {
-        position: relative;
-        width: 200%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-
-     .tarjetas-producto {
-            background-color: white;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-
-    nav {
-
+.tarjeta-carrousel {
+    position: relative;
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}    
+    .tarjetas-producto {
+        background-color: white;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-    } 
+    }    
+nav {
 
-    #preguntas {
-        background-color: #ff9f29;
-    }
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 
+
+#preguntas {
+    background-color: #ff9f29;
+}
 
 
 
