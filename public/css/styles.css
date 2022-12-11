@@ -133,7 +133,7 @@ nav{
 
 /* HOME */
 .body-home {
-    background-color: black;
+    background-color: #faf3e3;
 }
 .carrousel {
     background-color: gray;
@@ -177,6 +177,7 @@ nav{
     width: 50%;
     padding-top: 10px;
     filter: drop-shadow(6px 6px 3px #ff9f29);
+    transition: all 0.5s;
     
 }
 
@@ -214,7 +215,8 @@ nav{
 }
 
 .tarjetas-producto article img:hover {
-    transform: scale(1.1);
+   transform: rotate(0.05turn) scale(1.1);
+    
 }
 
 /* CARRITO DE COMPRAS */
