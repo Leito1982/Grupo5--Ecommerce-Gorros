@@ -221,6 +221,47 @@ nav{
 
 /* CARRITO DE COMPRAS */
 
+.logo { size: 30px;
+
+}
+
+.tarjetas-producto article div {
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+   
+}
+
+.tarjetas-producto article div p {
+    font-size: 14px;
+    margin: 0px;
+
+    .tarjeta-carrousel {
+        position: relative;
+        width: 200%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+     .tarjetas-producto {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+    nav {
+
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    } 
+
+    #preguntas {
+        background-color: #ff9f29;
+    }
+
+
 
 
 /* REGISTRO */
