@@ -42,42 +42,81 @@ background-color: var(--negro);
 }
 .tarjeta-carrousel-home img {
     width: calc(100% / 3);
-    height: 80px;
+    height: 100px;
 }
-
+.tarjetas-producto {
+    display: flex;
+    flex-wrap: wrap;
+}
 .tarjetas-producto article {
     text-align: center;
-    
-
+    position: relative;
+    margin: 10px 0px;
+    width: 50%;
 }
 
 .tarjetas-producto article img {
-    width: 70%;
-    filter: drop-shadow(6px 6px 3px #ff9f29);
+    width: 80%;
+    filter: drop-shadow(0px 0px 4px #ff9f29);
     transition: all 0.5s;
+    border-radius: 50%;
     
 }
 
 .tarjetas-producto article div {
-    margin-top: 10px;
-    padding-top: 10px;
-    margin-bottom: 10px;
-   
+    position: absolute;
+    top: 4px;
+    left: 53.2px;
+    background-color: rgba(26, 77, 46, 0.7);
+    width: 50%;
+    border-radius: 5px;
+    z-index: 10;
 }
 
 .tarjetas-producto article div p {
     font-size: 14px;
     margin: 0px;
+    color: #ff9f29;
 }
 
 .personalizar {
-    background-image: url(/images/descargar.jpeg);
+    background-image: url(/images/KTM-1.jpg);
     font-size: 14px;
+}
+.personalizar h3 {
+    margin: 0px;
 }
 .botones {
     display: flex;
     justify-content: space-around;
     font-size: 14px;
+}
+
+.footer-style{
+    background-color: var(--terciario);
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative;
+
+}
+.derechos{
+    font-size: 9px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    margin-top: -4.5px;
+    left: 4%;
+}
+.redes-sociales{
+    font-size: 9px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    margin-top: -4.5px;
+    right: 4%;
 }
 
 @keyframes mueve-carrousel {
