@@ -14,27 +14,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Distressed&display=swap" rel="stylesheet"> 
     <!-- Link al archivo CSS -->
     <link rel="stylesheet" href="/css/normalize.css">
-    <link href="/css/styles.css" rel="stylesheet">
+    <!-- <link href="/css/styles.css" rel="stylesheet"> -->
+    <link href="/css/styleProductDetail.css" rel="stylesheet">
     <!-- TITULO -->
     <title>Proyecto Intregrador - Gorras</title>
 </head>
 <body>
-    <header class="header-style">
-        <img class="logo" src="/images/descargar.jpeg" alt="prueba de logo">
-
-        <div class="search-bar-box">
+    <header>
+        <div class="top-bar">
+            <img src="/images/LOGO NEGRO.svg" alt="logo">
+            
             <div class="search-bar-container">
-                <input type="search-text" id="buscar" placeholder="Buscar">
-                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search-text" placeholder="Buscar">
+                <i class="fa fa-search"></i>
             </div>
+            
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <button class="burger-menu"><i class="fa fa-bars"></i></button>
         </div>
-        
-            <div class="burger-container">
-                <button class="burger-menu"><i class="fa fa-bars"></i></button>
-            </div>
-            <div class="cart-container">
-                <a class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
 
         <nav>
             <ul>
@@ -48,6 +46,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="main-style">
         <h3 class="nombre-producto">Nombre de Modelo</h3>
         <p class="info-producto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
