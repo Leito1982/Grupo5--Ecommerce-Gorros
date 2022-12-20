@@ -33,7 +33,7 @@ header {
 }
 .top-bar img {
     width: 25%;
-    max-height: 80px;
+    max-height: 70px;
 }
 .search-bar-container {
     position: relative;
@@ -91,10 +91,12 @@ header nav {
     flex-wrap: wrap;
 }
 .tarjetas-producto article {
-    text-align: center;
-    position: relative;
     margin: 10px 0px;
     width: 50%;
+}
+
+.imagen:hover {
+    filter: drop-shadow(0px 0px 15px #ff9f29);
 }
 .imagen {
     background-color: #ff9f29;
@@ -105,8 +107,8 @@ header nav {
     margin: auto;
 }
 .tarjetas-producto article img:hover {
-   transform: rotateY(180deg);
-    
+  transform: perspective(2000px) rotateY(30deg) translateX(-30px) translateZ(40px);
+  opacity: .6;
 }
 .tarjetas-producto article img {
     width: 100%;
@@ -116,9 +118,8 @@ header nav {
 }
 
 .tarjetas-producto article .descripcion {
-    position: absolute;
-    top: 4px;
-    left: 53.2px;
+    margin: auto;
+    text-align: center;
     background-color: rgba(26, 77, 46, 0.7);
     width: 50%;
     border-radius: 5px;
@@ -135,12 +136,10 @@ header nav {
     font-size: 14px;
     background-color: #faf3e3;
     padding: 10px;
-    margin-top: 10px;
-}
-.personalizar h3 {
-    margin: 0px;
+    height: 180px;
     text-align: center;
-    
+    align-content: center;
+
 }
 .personalizar .botones {
     display: flex;
@@ -199,18 +198,15 @@ header nav {
 }
 
 @media (min-width: 769px) {
-
-    .tarjeta-carrousel-home img {
-        height: 200px;
-    }
-
-    .tarjetas-producto article {
-      width: 25%;    
-    }
     .top-bar {
-        justify-content: space-evenly;
         padding: 0px 15px;
-        align-items: center;
+        justify-content: space-between;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .fa-cart-shopping {
+        font-size: 24px;    
     }
     header nav {
         display: flex;
@@ -221,21 +217,18 @@ header nav {
         display: flex;
         padding: 10px 0px;
         margin: 0px;
-        font-size: 22px;
+        font-size: 20px;
         gap: 15px;
         list-style-type: none;
     }
-
     header nav ul a {
         text-decoration: none;
         color: #ff9f29;
     }
-    
-    .burger-menu {
-        display: none;
+    .tarjeta-carrousel-home img {
+        height: 200px;
     }
-    .fa-cart-shopping {
-        font-size: 24px;    
+    .tarjetas-producto article div p {
+        font-size: 20px; 
     }
-
 }
