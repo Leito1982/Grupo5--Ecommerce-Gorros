@@ -11,6 +11,35 @@
 
 <body>
 
+    <!-- ENCABEZADO SACADO DE INDEX -->
+    <header>
+        <div class="top-bar">
+            <img src="/images/LOGO NEGRO.svg" alt="logo">
+            
+            <div class="search-bar-container">
+                <input type="search-text" placeholder="Buscar">
+                <i class="fa fa-search"></i>
+            </div>
+            
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <button class="burger-menu"><i class="fa fa-bars"></i></button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Historial</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Registrarse</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--  ENCABEZADO VIEJO DE CELULAR
     <header class="header-celular">
 
         <nav class="nav-celular">
@@ -22,20 +51,37 @@
             <d class="burger">  <i class="fa-solid fa-bars"></i>  </d>
             <d class="carrito"> <i class="fa-solid fa-cart-shopping"></i> </d>
         </nav>
-    </header>
+    </header> -->
 
+    <!-- ARTICULOS DE MUESTRAS -->
     <section class="muestra">
-        <img class="imagen1" src="/images/descargar.jpeg" alt="Imagen"> 
-        <img class="imagen2" src="/images/descargar.jpeg" alt="Imagen"> 
-        <img class="imagen3" src="/images/descargar.jpeg" alt="Imagen"> 
+        <img class="imagen1" src="/images/ADI 1.jpg" alt="Imagen"> 
+        <img class="imagen1" src="/images/FER 1.jpg" alt="Imagen"> 
+        <img class="imagen1" src="/images/PUM 2.jpg" alt="Imagen"> 
     </section>
 
-    <section class="inicio">
+<form class="inicio" action="#" method="post">
+    <h2> INICIO DE SESION </h2>
+    
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo magnam nostrum aspernatur quia fugiat
+        quibusdam expedita.</p>
+    
+<label for="usuario"> Ingrese Correo Electronico / Usuario / Telefono Movil </label>
+<input type="text" name="usuario" id="usuario" placeholder="fulano@gmail.com">
+
+<label for="pass"> Ingrese su palabra clave </label>
+<input type="password" name="pass" minlength="8">
+
+    <button class="ingresar"> Ingresar </button>
+    <button class="registrarse"> Registrarse </button>
+    <button class="pass"> Olvido su palabra clave?</button>
+
+
+</form>
+
+    <!-- <section class="inicio">
 
         <h1> INICIO DE SESION </h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo magnam nostrum aspernatur quia fugiat
-            quibusdam expedita dolor tempora? Excepturi modi optio ratione, eveniet quisquam minima soluta nesciunt fuga
-            doloribus.</p>
 
         <h3>E-mail / Telefono / Usuario </h3>
 
@@ -48,7 +94,7 @@
         <button class="ingresar"> Ingresar </button>
         <button class="registrarse"> Registrarse </button>
 
-    </section>
+    </section> -->
 
     <footer class="footer-style">
         <d class="contacto">
