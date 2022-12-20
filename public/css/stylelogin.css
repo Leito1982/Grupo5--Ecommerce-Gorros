@@ -21,19 +21,55 @@
     --violeta: violet;
 }
 
-body {
-    background-color: var(--primario);
-    font-family: 'Roboto Slab', serif;
+/********************header******************/
+header { 
+    background-color: black;
+    border-bottom: solid 3px #ff9f29;
 }
-
-.nav-celular {
+.top-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: var(--secundario);
-    padding: 5px;
+}
+.top-bar img {
+    width: 25%;
+}
+.search-bar-container {
+    position: relative;
+    width: 50%;
+}
+.search-bar-container input {
+    border-radius: 20px;
+    width: 100%;
+}
+.search-bar-container i {
+    color: #ff9f29;
+    position: absolute;
+    top: 15%;
+    right: 4%;
+}
+.fa-cart-shopping {
+    color: #ff9f29;    
+}
+.burger-menu {
+    border-radius: 5px;
+    background-color: #ff9f29;
+    color: #faf3e3;
+    border: none;    
+}
+header nav {
+    display: none;
 }
 
+
+body {
+    background-color: var(--negro);
+    font-family: 'Roboto Slab', serif;
+    color: #ff9f29;
+}
+
+
+/* articulos de muestra */
 .muestra {
     display: flex;
     justify-content: space-between;
@@ -42,33 +78,45 @@ body {
     padding: 5px;
 }
 
-.imagen1,
-.imagen2,
-.imagen3 {
+.imagen1 {
     width: 30%;
     height: auto;
-    border: solid black 2px;
     border-radius: 50%;
-    box-sizing: border-box;
+    background-color: #ff9f29;
+    border: solid 4px #1a4d2e;
+    filter: drop-shadow(0px 0px 4px #ff9f29);
 }
 
-.logo-celular {
-    width: 10%;
-    border: solid black 2px;
-    border-radius: 50%;
-}
 
-.botones {
+/* FORMULARIO  */
+.inicio {
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin: 3px;
+}
+
+.inicio label {
+    font-size: 15px ;
+    font-weight: bold;
+}
+
+H2, P {
+    margin: 0px;
 }
 
 .ingresar,
-.registrarse {
-    width: 100px;
-    margin: 10px;
+.registrarse,
+.pass {
+    
+
+    background-color: #1a4d2e;
+    color: #ff9f29;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
 }
 
 .footer-style {
