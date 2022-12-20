@@ -40,8 +40,11 @@ header{
     align-items: center;
 }
 
-.top-bar img {
+.top-bar a{
     width: 25%;
+}
+.top-bar img {
+    width: 100%;
 }
 
 .search-bar-container {
@@ -105,7 +108,7 @@ header nav {
     border: solid black 2px;
     border-radius: 50%;
     margin: 4%;
-    max-width: 390px;
+    /* max-width: 390px; */
     background-color: #ff9f29;
     border: solid 4px #1a4d2e;
     filter: drop-shadow(0px 0px 4px #ff9f29);
@@ -227,7 +230,6 @@ header nav {
 @media (min-width: 480px){
 
     .main-style{
-        background-color: blue;
         padding-top: 2%;
     }
 
@@ -238,7 +240,6 @@ header nav {
 @media (min-width: 1024px){
 
     .main-style{
-        background-color: red;
         padding-top: 2%;
     }
     
