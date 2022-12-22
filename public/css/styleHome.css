@@ -187,6 +187,11 @@ footer p {
     align-items: center;
     gap: 20px;
 }
+.redes i {
+    font-size: 20px;
+    color: white;
+    
+}
 
 
 @keyframes mueve-carrousel {
@@ -207,6 +212,16 @@ footer p {
 }
 
 @media (min-width: 769px) {
+    header {
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0px;
+    }
+    main {
+        margin-top: 136px;
+
+    }
     .top-bar {
         padding: 0px 15px;
         justify-content: space-between;
@@ -244,5 +259,7 @@ footer p {
     .tarjetas-producto article div p {
         font-size: 20px; 
     }
-    
+    .contacto {
+        gap: 15px;
+    }
 }
