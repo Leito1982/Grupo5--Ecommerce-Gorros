@@ -33,7 +33,7 @@ header {
 }
 .top-bar img {
     width: 25%;
-    max-height: 70px;
+    max-height: 90px;
 }
 .search-bar-container {
     position: relative;
@@ -139,7 +139,7 @@ header nav {
     height: 180px;
     text-align: center;
     align-content: center;
-
+ 
 }
 .personalizar .botones {
     display: flex;
@@ -153,32 +153,41 @@ header nav {
     border-radius: 5px;
     width: 96px;
 }
-.footer-style{
-    background-color: var(--terciario);
+footer{
+    background-color: #1a4d2e;
     color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 2%;
-    padding-right: 2%;
-    position: relative;
+    font-size: 12px;
+}
+footer p {
+    margin: 0px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.contacto-redes {
+   display: flex;
+}
+.contacto {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0px;
+    width: 50%;
+}
+.contacto a{
+    text-decoration: none;
+    color: white;
 
 }
-.derechos{
-    font-size: 9px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    margin-top: -4.5px;
-    left: 4%;
+.redes {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-.redes-sociales{
-    font-size: 9px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    margin-top: -4.5px;
-    right: 4%;
-}
+
 
 @keyframes mueve-carrousel {
     0% {right: 0px;}
@@ -202,6 +211,10 @@ header nav {
         padding: 0px 15px;
         justify-content: space-between;
     }
+    .top-bar img {
+        width: 20%;
+    }
+
     .burger-menu {
         display: none;
     }
@@ -231,4 +244,5 @@ header nav {
     .tarjetas-producto article div p {
         font-size: 20px; 
     }
+    
 }
