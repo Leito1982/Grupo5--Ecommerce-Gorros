@@ -21,9 +21,7 @@ body{
 font-family: 'Roboto Slab', serif;
 background-color: var(--negro);
 }
-
-/* --- Header --- */
-
+/********************header******************/
 header { 
     background-color: black;
     border-bottom: solid 3px #ff9f29;
@@ -72,119 +70,6 @@ header nav {
     padding-top: 2%;
 }
 
-.nombre-producto {
-    text-align: center;
-}
-
-.info-producto {
-    text-align: center;
-    margin: 3%;
-}
-
-.imagen-principal {
-    display: flex;
-    height: 45%;
-    width: 45%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.imagen001 {
-    width: 100%;
-    height: auto;
-    border: solid black 2px;
-    border-radius: 50%;
-    margin: 4%;
-    /* max-width: 390px; */
-    background-color: #ff9f29;
-    border: solid 4px #1a4d2e;
-    filter: drop-shadow(0px 0px 4px #ff9f29);
-}
-
-.imagenes-secundarias {
-    display: flex;
-    justify-content: space-around;
-    margin: 2%;
-}
-
-.imagen002 {
-    width: 30%;
-    height: auto;
-    border: solid black 2px;
-    border-radius: 50%;
-    background-color: #ff9f29;
-    border: solid 4px #1a4d2e;
-    filter: drop-shadow(0px 0px 4px #ff9f29);
-
-}
-
-.imagen003 {
-    width: 30%;
-    height: auto;
-    border: solid black 2px;
-    border-radius: 50%;
-    background-color: #ff9f29;
-    border: solid 4px #1a4d2e;
-    filter: drop-shadow(0px 0px 4px #ff9f29);
-
-}
-
-.imagen004 {
-    width: 30%;
-    height: auto;
-    border: solid black 2px;
-    border-radius: 50%;
-    background-color: #ff9f29;
-    border: solid 4px #1a4d2e;
-    filter: drop-shadow(0px 0px 4px #ff9f29);
-
-}
-
-.precio {
-    text-align: center;
-}
-
-.cuotas {
-    text-align: center;
-}
-
-.metodos-de-pago {
-    text-align: center;
-}
-
-.tarjetas {
-    text-align: center;
-}
-
-.checkout {
-    display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-}
-
-.agregar-al-carrito {
-    background-color: #1a4d2e;
-    color: #ff9f29;
-    padding: 5px;
-    border-radius: 5px;
-    width: 96px;
-    text-align: center;
-}
-
-.comprar {
-    background-color: #1a4d2e;
-    color: #ff9f29;
-    padding-top: 10px;
-    border-radius: 5px;
-    width: 96px;
-    text-align: center;
-    vertical-align: middle;
-}
-
 
 /* --- Footer --- */
 
@@ -229,26 +114,29 @@ footer p {
 }
 
 
-/* Media */
+/* --- Adaptaciones de Media --- */
+
+@media (min-width: 426px) {
+    .tarjetas-producto article {
+      width: 25%;
+    }
+}
 
 @media (min-width: 769px) {
-
     header {
-        position: fixed;
-        z-index: 100;
-        width: 100%;
-        top: 0px;
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0px;
     }
-
     main {
         margin-top: 136px;
-    }
 
+    }
     .top-bar {
         padding: 0px 15px;
         justify-content: space-between;
     }
-
     .top-bar img {
         width: 20%;
     }
@@ -256,18 +144,15 @@ footer p {
     .burger-menu {
         display: none;
     }
-
     .fa-cart-shopping {
-        font-size: 24px;
+        font-size: 24px;    
     }
-
     header nav {
         display: flex;
         justify-content: space-between;
         padding: 0px 20px;
     }
-
-    header nav ul {
+    header nav ul{
         display: flex;
         padding: 10px 0px;
         margin: 0px;
@@ -275,20 +160,16 @@ footer p {
         gap: 15px;
         list-style-type: none;
     }
-
     header nav ul a {
         text-decoration: none;
         color: #ff9f29;
     }
-
     .tarjeta-carrousel-home img {
         height: 200px;
     }
-
     .tarjetas-producto article div p {
-        font-size: 20px;
+        font-size: 20px; 
     }
-
     .contacto {
         gap: 15px;
     }

@@ -22,27 +22,28 @@
 <body>
     <header>
         <div class="top-bar">
-            <a href="/" ><img src="/images/LOGO NEGRO.svg" alt="logo"></a>
+            <img src="/images/LOGO NEGRO.svg" alt="logo">
             
             <div class="search-bar-container">
                 <input type="search-text" placeholder="Buscar">
                 <i class="fa fa-search"></i>
             </div>
             
-            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
 
             <button class="burger-menu"><i class="fa fa-bars"></i></button>
         </div>
 
         <nav>
             <ul>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">Categorias</a></li>
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Historial</a></li>
             </ul>
             <ul>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Log In</a></li>
+                <li><a href="/register">Registrarse</a></li>
+                <li><a href="/login">Log In</a></li>
             </ul>
         </nav>
     </header>
@@ -76,9 +77,21 @@
         </div>
     </main>
 
-    <footer class="footer-style">
-        <p class="derechos">Contacto, Direccion, Telefono, Copyright</p>
-        <p class="redes-sociales"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-twitter"></i></p>
+    <footer>
+        <article class="contacto-redes">
+            <div class="contacto">
+                <a href="mailito:elgorro@honkycaps.com">elgorro@honkycaps.com</a>
+                <a href="">Av. De La Gorra 452 Bs. As.</a>
+                <a href="">(5411) 3638-9956</a>
+            </div>    
+            <div class="redes">
+                <a href="https:/www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https:/www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https:/www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </article>
+
+        <p>Hecho por grupo 5 &copy 2022 - todos los derechos reservados. </p>
     </footer>
     
 
