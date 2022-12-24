@@ -123,13 +123,14 @@ header nav {
     background-color: rgba(26, 77, 46, 0.7);
     width: 50%;
     border-radius: 5px;
-    z-index: 10;
+    transform: skewx(-10deg);
+
 }
 
 .tarjetas-producto article div p {
     font-size: 14px;
     margin: 0px;
-    color: #ff9f29;
+    color: #faf3e3;
 }
 
 .personalizar {
@@ -149,7 +150,7 @@ header nav {
     justify-content: center;
     width: 45%;
     text-align: center;
-    color: orange;
+    color: #faf3e3;
     
 }
 .img-perso {
@@ -174,7 +175,7 @@ header nav {
 }
 .botones button {
     background-color: #1a4d2e;
-    color: #ff9f29;
+    color: #faf3e3;
     font-size: 14px;
     padding: 5px;
     border-radius: 5px;
