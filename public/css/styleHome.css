@@ -85,6 +85,7 @@ header nav {
 .tarjeta-carrousel-home img {
     width: calc(100% / 3);
     height: 150px;
+    object-fit: cover;
 }
 .tarjetas-producto {
     display: flex;
