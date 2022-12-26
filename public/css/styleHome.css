@@ -133,46 +133,59 @@ header nav {
     margin: 0px;
     color: #faf3e3;
 }
-
+h3 {
+    color: #faf3e3;
+    text-align: center;
+    border-top: solid 2px #ff9f29;
+    padding: 10px 0px;
+    margin: 10px 0px 0px 0px;
+    background-color: #1a4d2e;
+}
 .personalizar {
+    margin: 0px;
     display: flex;
-    background-color: black;
-    justify-content:space-around;
-    width: 100%;
-    overflow: hidden;
-    border-top: solid 6px #1a4d2e;
-    border-bottom: solid 6px #1a4d2e;
-    margin: 10px 0px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a4d2e;
+    padding: 5px;
 }
 .textos-perso {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    text-align: center;
+    width: 70%;
+}
+.textos-perso h3 {
     color: #faf3e3;
-    
+    text-align: center;
+    border-top: solid 2px #ff9f29;
+    padding: 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+.textos-perso p {
+    margin: 0px;
+    color: #faf3e3;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;  
 }
 .img-perso {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    transform: skewx(10deg);
+    width: 30%;
+    text-align: center;
+    background-color: #ff9f29;
+    padding: 5px;
+    border-radius: 4%; 
 }
-.img-perso img{
-    width: 60%;
-    border: solid 6px green;
+.img-perso img {
+    width: 100%;
+    display: block;
     border-radius: 50%;
-}
+    border: solid 6px #1a4d2e;
+    margin: auto;
+}   
 
 .botones {
     display: flex;
     justify-content:center;
     gap: 20px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 .botones button {
     background-color: #1a4d2e;
@@ -245,8 +258,11 @@ footer p {
     .tarjetas-producto article {
       width: 25%;
     }
-    .img-perso img {
-        width: 35%;
+    .textos-perso {
+        width: 80%;
+    }
+    .img-perso {
+        width: 20%;
     }
 }
 
@@ -297,6 +313,9 @@ footer p {
     }
     .tarjetas-producto article div p {
         font-size: 20px; 
+    }
+    .textos-perso p {
+        font-size: 20px;
     }
     .botones button{
         font-size: 20px;
