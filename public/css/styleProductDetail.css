@@ -73,12 +73,22 @@ header nav {
 }
 
 .nombre-producto {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .info-producto {
     text-align: center;
     margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .imagen-principal {
@@ -143,15 +153,33 @@ header nav {
 }
 
 .precio {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .cuotas {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .metodos-de-pago {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .tarjetas {
