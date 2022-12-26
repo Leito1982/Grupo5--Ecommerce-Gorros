@@ -152,6 +152,13 @@ header nav {
 
 }
 
+.boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .precio {
     display: flex;
     justify-content: space-around;
@@ -160,6 +167,7 @@ header nav {
     background-color: var(--terciario);
     padding: 2px;
     border-radius: 5px;
+    width: 40%;
 }
 
 .cuotas {
@@ -170,6 +178,7 @@ header nav {
     background-color: var(--terciario);
     padding: 2px;
     border-radius: 5px;
+    width: 30%;
 }
 
 .metodos-de-pago {
@@ -180,10 +189,18 @@ header nav {
     background-color: var(--terciario);
     padding: 2px;
     border-radius: 5px;
+    width: 30%;
 }
 
 .tarjetas {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+    width: 15%;
 }
 
 .checkout {
