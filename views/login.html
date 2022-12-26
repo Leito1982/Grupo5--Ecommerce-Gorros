@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/stylelogin.css">
     <title>Login</title>
 </head>
@@ -14,7 +16,7 @@
     <!-- ENCABEZADO SACADO DE INDEX -->
     <header>
         <div class="top-bar">
-            <img src="/images/LOGO NEGRO.svg" alt="logo">
+         <a href="/" >   <img src="/images/LOGO NEGRO.svg" alt="logo"> </a>
             
             <div class="search-bar-container">
                 <input type="search-text" placeholder="Buscar">
@@ -39,25 +41,15 @@
         </nav>
     </header>
 
-<!--  ENCABEZADO VIEJO DE CELULAR
-    <header class="header-celular">
-
-        <nav class="nav-celular">
-                <img class="logo-celular" src="/images/descargar.jpeg" alt="Logo">
-            
-            <d class="buscador-celular"> <input type="search-text" id="buscar" placeholder="Buscar"> </d>
-            <i class="fa fa-search"></i>
-
-            <d class="burger">  <i class="fa-solid fa-bars"></i>  </d>
-            <d class="carrito"> <i class="fa-solid fa-cart-shopping"></i> </d>
-        </nav>
-    </header> -->
+    </header>
 
     <!-- ARTICULOS DE MUESTRAS -->
     <section class="muestra">
-        <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> 
-        <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> 
-        <img class="imagen1" src="/images/PUM-2.jpg" alt="Imagen"> 
+        <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
+        <a href="/productDetail"> <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> </a> 
+        <a href="/productDetail"> <img class="imagen1" src="/images/HON-1.jpg" alt="Imagen"> </a> 
+        <a href="/productDetail"> <img id= "cuartaImagen" class="imagen1" src="/images/KTM-1.jpg" alt="Imagen"> </a> 
+        
     </section>
 
 <form class="inicio" action="#" method="post">
@@ -79,24 +71,7 @@
 
 </form>
 
-    <!-- <section class="inicio">
-
-        <h1> INICIO DE SESION </h1>
-
-        <h3>E-mail / Telefono / Usuario </h3>
-
-        <d class="correo"><input type="search-text" id="buscar" placeholder="fulano@gmail.com"></d>
-        <p>Olvidaste tu contrasenia</p>
-    </section>
-
-    <section class="botones">
-
-        <button class="ingresar"> Ingresar </button>
-        <button class="registrarse"> Registrarse </button>
-
-    </section> -->
-
-    <footer class="footer-style">
+      <footer class="footer-style">
         <d class="contacto">
             Contacto, Direccion, Copyright
         </d>
