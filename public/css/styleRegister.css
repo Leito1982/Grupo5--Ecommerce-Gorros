@@ -130,6 +130,15 @@ p {
 
 /* --- Footer --- */
 
+.footer-style {
+    display: flex;
+    background-color: var(--terciario);
+    color: white;
+    justify-content: space-around;
+    padding: 3px;
+
+}
+
 footer{
     background-color: #1a4d2e;
     color: white;
