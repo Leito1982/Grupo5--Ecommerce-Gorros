@@ -4,98 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-
-    <!-- Iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Fuente Roboto Slab regular 400 y Rubik Distressed 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Distressed&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.google.com/specimen/Anton" crossorigin>
-    
     <!-- Link al archivo CSS -->
     <link rel="stylesheet" href="/css/normalize.css">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styleProductCart.css" rel="stylesheet">
     <!-- TITULO -->
-    <title>Honky Caps</title>
+    <title>Product Cart</title>
 </head>
-    <body class="body-home">
-        <header class="header-style">
-            <img class="logo" src="/images/logo negro.svg" alt="logo">
-            <div class="search-bar-box">
-                <div class="search-bar-container">
-                    <input type="search-text" id="buscar" placeholder="Buscar">
-                    <span class="icon"><i class="fa fa-search"></i></span>
-                </div>
-            </div>
-            <div class="burger-container">
-                <button class="burger-menu"><i class="fa fa-bars"></i></button>
-            </div>
-            <div class="cart-container">
-                <a class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Historial</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Registrarse</a></li>
-                    <li><a href="#">Log In</a></li>
-                </ul>
-            </nav>
-        </header>
     
-        <main>
-            <section class="carrousel">
-                <article class="tarjeta-carrousel">
-                    <img src="" alt="IMAGEN-1">
-                    <img src="" alt="IMAGEN-2">
-                    <img src="" alt="IMAGEN-3">
-                </article>
-            </section>
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="/images/LOGO NEGRO.svg" alt="logo">
+            
+            <div class="search-bar-container">
+                <input type="search-text" placeholder="Buscar">
+                <i class="fa fa-search"></i>
+            </div>
+            
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
 
+            <button class="burger-menu"><i class="fa fa-bars"></i></button>
+        </div>
 
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Historial</a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Registrarse</a></li>
+                <li><a href="/login">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-
-
-
-
-            <section class="tarjetas-producto">
-                <article>
-                    <a href="/productDetail">
-                        <img src="/images/adi 1.jpg" alt="">
-                        <div class="descripcion">
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <img src="/images/adi 2.jpg" alt="">
-                    <div class="descripcion">
+    <main>
+        <h3>Carrito de Compras</h3>
+        <form action="" method="post">
+            <section class="productos">
+                <article class="item">
+                    <img src="/images/DUF-1.jpg" alt="foto">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div class="cantidad-precio">
+                        <label for="cantidad">Cantidad</label>
+                        <select name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <p>
+                            $4300
+                        </p>
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </article>
-            </section>       
-            
-            <section>
-                <nav>
-                    <ul> PRECIO</ul>
-                    <ul> TOTAL </ul>
-                </nav>
+                <article class="item">
+                    <img src="/images/KTM-1.jpg" alt="foto">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div class="cantidad-precio">
+                        <label for="cantidad">Cantidad</label>
+                        <select name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <p>
+                            $4300
+                        </p>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/images/ADI1.jpg" alt="foto">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div class="cantidad-precio">
+                        <label for="cantidad">Cantidad</label>
+                        <select name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <p>
+                            $4300
+                        </p>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </article>
             </section>
 
+            <section class="totales">
+                <div class="envio">
+                    <p>Envio</p>
+                    <p>$1000</p>
+                </div>
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p>$5300</p>
+                </div>
+                <div class="descuento">
+                    <p>Descuento</p>
+                    <p>$0</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p>$5300</p>
+                </div>
+            </section>   
+        </form>
 
+        <div class="botones">
+                <button>Pagar</button>
+                <button action="/">Seguir Comprando</button>
+        </div>  
+    </main>
+    
 
-            <section id="preguntas">
-                <p> Preguntas Frecuentes </p> 
-            </section>
+    <footer>
+        <article class="contacto-redes">
+            <div class="contacto">
+                <a href="mailito:elgorro@honkycaps.com">elgorro@honkycaps.com</a>
+                <a href="">Av. De La Gorra 452 Bs. As.</a>
+                <a href="">(5411) 3638-9956</a>
+            </div>    
+            <div class="redes">
+                <a href="https:/www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https:/www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https:/www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </article>
 
-
+        <p>Hecho por grupo 5 &copy 2022 - todos los derechos reservados. </p>
+    </footer>
     <!-- Script de los iconos -->
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 </body>
