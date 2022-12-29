@@ -6,15 +6,8 @@
     --primario: #faf3e3;
     --secundario: #ff9f29;
     --terciario: #1a4d2e;
-
     --negro: black;
     --blanco: white;
-    --rojo: red;
-    --azul: blue;
-    --amarillo: yellow;
-    --verde: green;
-    --naranja: orange;
-    --violeta: violet;
 }
 
 body{
@@ -80,19 +73,19 @@ h3 {
     border-bottom: solid 2px #ff9f29;
     padding: 4px 0px;
 }
-.productos .item p, .productos .item i {
+.item p, .item i {
     color: #faf3e3;
 }
 
-.productos .item .cantidad-precio {
+.item .cantidad-precio {
     text-align: center;
     margin-right: 4px;
     color: #faf3e3;
 }
-.productos .item .cantidad-precio select {
+.cantidad-precio select {
     width: 40px;
 }
-.productos .item img {
+.item img {
     width: 70px;
     border-radius: 50%;
     margin-left: 4px;
@@ -131,6 +124,12 @@ h3 {
     padding: 5px;
     border-radius: 5px;
     width: 96px;
+}
+main a {
+    color: #faf3e3;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;   
 }
 
 
@@ -176,6 +175,26 @@ footer p {
 
 
 @media (min-width: 426px) {
+    form {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .productos {
+        width: 70%;
+    }
+    .totales-botones {
+        margin-right: 5px;
+        padding: 30px 0px;
+        width: 25%;
+    }
+    .totales {
+        width: 100%;
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
@@ -220,7 +239,19 @@ footer p {
     main {
         margin-top: 136px;
     }
-
+    .productos .item {
+        justify-content: space-around;
+    }
+    .cantidad-precio {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
     .contacto {
         gap: 15px;
     }
