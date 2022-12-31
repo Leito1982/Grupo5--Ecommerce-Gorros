@@ -178,14 +178,7 @@ footer p {
     
 }
 
-.footer-style {
-    display: flex;
-    background-color: var(--terciario);
-    color: white;
-    justify-content: space-around;
-    padding: 3px;
 
-}
 
 
 /* --- Adaptaciones de Media --- */
@@ -248,7 +241,7 @@ footer p {
     }
     
     input {
-        padding: 1.5vw;
+        padding: 1.1vw;
         font-size: 20px;
     }
 
