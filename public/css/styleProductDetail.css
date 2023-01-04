@@ -119,6 +119,12 @@ header nav {
     margin: 2%;
 }
 
+.imagenes-secundarias img:hover {
+    transform: perspective(2000px) rotateY(30deg) translateX(-30px) translateZ(40px);
+    opacity: .6;
+
+}
+
 .imagen002 {
     width: 30%;
     height: auto;

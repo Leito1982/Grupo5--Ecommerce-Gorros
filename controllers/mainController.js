@@ -6,7 +6,7 @@ const controller = {
     },
 
     productDetail: (req, res) => {
-        res.render('productDetail') 
+        res.render('productDetail', {style: "/css/styleProductDetail.css", title: "Honky Caps - Detalle de Producto"}) 
     },
 
     register: (req, res) => {
