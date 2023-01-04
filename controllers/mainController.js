@@ -2,7 +2,7 @@
 const controller = {
 
     index: (req, res) => {
-        res.render('index')
+        res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps'})
     },
 
     productDetail: (req, res) => {
