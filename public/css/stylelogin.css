@@ -179,4 +179,10 @@ H2, P {
     #cuartaImagen {
         display: inline-block;
     }
+ 
+    main {
+        margin-top: 140px;
+    }
+    
+
 }

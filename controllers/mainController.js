@@ -14,7 +14,7 @@ const controller = {
     },
     
     login: (req, res) => {
-        res.render('login',  {style: "/css/stylelogin.css", title: 'Login'} ) 
+        res.render('login',  {style: "/css/stylelogin.css", title: 'Honky Caps - Login'} ) 
         
     },
 

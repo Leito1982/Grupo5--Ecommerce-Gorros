@@ -16,7 +16,9 @@
 <body>
 
     <!-- ENCABEZADO SACADO DE INDEX -->
-    <header>
+<%- include ("./partials/header") %> 
+
+    <!-- <header>
         <div class="top-bar">
          <a href="/" >   <img src="/images/LOGO NEGRO.svg" alt="logo"> </a>
             
@@ -41,39 +43,41 @@
                 <li><a href="#">Log In</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
-    </header>
+    <main>
 
-    <!-- ARTICULOS DE MUESTRAS -->
-    <section class="muestra">
-        <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img class="imagen1" src="/images/HON-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img id= "cuartaImagen" class="imagen1" src="/images/KTM-1.jpg" alt="Imagen"> </a> 
+        <!-- ARTICULOS DE MUESTRAS -->
+        <section class="muestra">
+            <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
+            <a href="/productDetail"> <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> </a> 
+            <a href="/productDetail"> <img class="imagen1" src="/images/HON-1.jpg" alt="Imagen"> </a> 
+            <a href="/productDetail"> <img id= "cuartaImagen" class="imagen1" src="/images/KTM-1.jpg" alt="Imagen"> </a> 
+            
+        </section>
         
-    </section>
-
-<form class="inicio" action="#" method="post">
+        <form class="inicio" action="#" method="post">
     <h2> INICIO DE SESION </h2>
     
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo magnam nostrum aspernatur quia fugiat
         quibusdam expedita.</p>
+        
+        <label for="usuario"> Ingrese Correo Electronico / Usuario / Telefono Movil </label>
+        <input type="text" name="usuario" id="usuario" placeholder="fulano@gmail.com">
+        
+        <label for="pass"> Ingrese su palabra clave </label>
+        <input type="password" name="pass" minlength="8">
+        
+        <button class="ingresar"> Ingresar </button>
+        <button class="registrarse"> Registrarse </button>
+        <button class="pass"> Olvido su palabra clave?</button>
+        
+        
+    </form>
     
-<label for="usuario"> Ingrese Correo Electronico / Usuario / Telefono Movil </label>
-<input type="text" name="usuario" id="usuario" placeholder="fulano@gmail.com">
-
-<label for="pass"> Ingrese su palabra clave </label>
-<input type="password" name="pass" minlength="8">
-
-    <button class="ingresar"> Ingresar </button>
-    <button class="registrarse"> Registrarse </button>
-    <button class="pass"> Olvido su palabra clave?</button>
-
-
-</form>
-
-      <footer class="footer-style">
+    <%- include ("./partials/footer") %> 
+    
+    <!-- <footer class="footer-style">
         <d class="contacto">
             Contacto, Direccion, Copyright
         </d>
@@ -82,11 +86,14 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-twitter"></i>
         </d>
-
-    </footer>
-
+        
+    </footer> -->
+    
     <!-- Script de los iconos -->
-    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+</main>
+
+<script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
