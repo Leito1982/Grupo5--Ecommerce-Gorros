@@ -253,4 +253,8 @@ footer p {
     p {
         font-size: 20px;
     }
+
+    main {
+        margin-top: 140px;
+    }
 }

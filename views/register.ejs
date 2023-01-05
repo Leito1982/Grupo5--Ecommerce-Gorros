@@ -2,31 +2,13 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Fuente Roboto Slab regular 400 y Rubik Distressed 400 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Distressed&display=swap" rel="stylesheet"> 
-    
-    <!-- Link al archivo CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
-
-    <!-- <link href="/css/styles.css" rel="stylesheet"> -->
-    <link href="/css/styleRegister.css" rel="stylesheet">
-    
-    <!-- TITULO -->
-    <title>Registro</title>
+    <%- include('./partials/head') %> 
 
 </head>
 
-<body class="body-home">
-    <header>
+<body >
+    <%- include ("./partials/header") %> 
+   <!-- <header>
         <div class="top-bar">
             <img src="/images/LOGO NEGRO.svg" alt="logo">
             
@@ -52,10 +34,10 @@
                 <li><a href="/login">Log In</a></li>
             </ul>
         </nav>
-    </header>
+    </header>  -->
 
 
-   
+    <main>
          <!-- ARTICULOS DE MUESTRAS -->
     <section class="muestra">
         <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
@@ -101,8 +83,9 @@
   
     </form>
 
+    <%- include ("./partials/footer") %> 
 
-    <footer>
+    <!-- <footer>
         <article class="contacto-redes">
             <div class="contacto">
                 <a href="mailito:elgorro@honkycaps.com">elgorro@honkycaps.com</a>
@@ -117,7 +100,10 @@
         </article>
 
         <p>Hecho por grupo 5 &copy 2022 - todos los derechos reservados. </p>
-    </footer>
+    </footer> -->
+
+</main>
+
        <!-- Script de los iconos -->
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 </body>

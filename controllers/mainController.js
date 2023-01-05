@@ -10,7 +10,7 @@ const controller = {
     },
     
     register: (req, res) => {
-        res.render('register') 
+        res.render('register', {style:"/css/styleRegister.css", title: "Honky Caps - Register" }) 
     },
     
     login: (req, res) => {
