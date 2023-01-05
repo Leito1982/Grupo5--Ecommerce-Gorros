@@ -17,137 +17,21 @@
         </section>
 
             <section class="tarjetas-producto">
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="<%= products[0].image %> " alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p><%= products[0].name %> </p>
-                            <p><%= products[0].price %> </p>
-                        </div>
-                    </a>
-                </article>
 
-                <article>
+                <% products.forEach(product => { %>
+                 <article>
                     <a href="/productDetail">
                         <div class="imagen">
-                            <img src="/images/ADI1.jpg" alt="foto">
+                            <img src="<%= product.image %> " alt="foto">
                         </div>
                         <div class="descripcion">
-                            <p>ADIDAS</p>
-                            <p>$4300</p>
+                            <p><%= product.name %> </p>
+                            <p><%= product.price %> </p>
                         </div>
                     </a>
                 </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/DUF-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>DUFF</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/cor-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>CORONA</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/NY1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>NEW YORK</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/HON-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>HONDA</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/KTM-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>KTM</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/PUM-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>PUMA</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/riv-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>RIVER</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
+                <% }) %>
                 
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/boc-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>BOCA</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="/productDetail">
-                        <div class="imagen">
-                            <img src="/images/V46-1.jpg" alt="foto">
-                        </div>
-                        <div class="descripcion">
-                            <p>V46</p>
-                            <p>$4300</p>
-                        </div>
-                    </a>
-                </article>
             </section>
             
             <section class="personalizar">
