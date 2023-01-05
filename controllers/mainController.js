@@ -1,8 +1,9 @@
+const products = require('../dataBase/products');
 
 const controller = {
 
     index: (req, res) => {
-        res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps'})
+        res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps', products})
     },
 
     productDetail: (req, res) => {
@@ -19,7 +20,7 @@ const controller = {
     },
 
     productCart: (req, res) => {
-        res.render('productCart') 
+        res.render('productCart', {style: '/css/styleProductCart.css', title: 'Product Cart'}) 
     },
 
 }
