@@ -14,5 +14,7 @@ const path = require("path");
 
     router.get ('/productCart', mainController.productCart);
 
+    router.get ('/productCreate', mainController.productCreate);
+
 
 module.exports = router

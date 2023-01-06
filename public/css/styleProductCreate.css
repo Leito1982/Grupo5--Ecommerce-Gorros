@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --primario: #faf3e3;
+    --secundario: #ff9f29;
+    --terciario: #1a4d2e;
+    --negro: black;
+    --blanco: white;
+}
+
+body{
+font-family: 'Roboto Slab', serif;
+background-color: var(--negro);
+}

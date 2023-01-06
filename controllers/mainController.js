@@ -23,6 +23,10 @@ const controller = {
         res.render('./products/productCart', {style: '/css/styleProductCart.css', title: 'Product Cart'}) 
     },
 
+    productCreate: (req, res) => {
+        res.render('./products/productCreate', {style: '/css/styleProductCreate.css', title: 'Product Create'}) 
+    }
+
 }
 
 module.exports = controller;
