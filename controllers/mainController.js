@@ -7,20 +7,20 @@ const controller = {
     },
 
     productDetail: (req, res) => {
-        res.render('productDetail', {style: "/css/styleProductDetail.css", title: "Honky Caps - Detalle de Producto"}) 
+        res.render('./products/productDetail', {style: "/css/styleProductDetail.css", title: "Honky Caps - Detalle de Producto"}) 
     },
     
     register: (req, res) => {
-        res.render('register', {style:"/css/styleRegister.css", title: "Honky Caps - Register" }) 
+        res.render('./user/register', {style:"/css/styleRegister.css", title: "Honky Caps - Register" }) 
     },
     
     login: (req, res) => {
-        res.render('login',  {style: "/css/stylelogin.css", title: 'Honky Caps - Login'} ) 
+        res.render('./user/login',  {style: "/css/stylelogin.css", title: 'Honky Caps - Login'} ) 
         
     },
 
     productCart: (req, res) => {
-        res.render('productCart', {style: '/css/styleProductCart.css', title: 'Product Cart'}) 
+        res.render('./products/productCart', {style: '/css/styleProductCart.css', title: 'Product Cart'}) 
     },
 
 }
