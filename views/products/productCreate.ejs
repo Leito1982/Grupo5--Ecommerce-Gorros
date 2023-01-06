@@ -7,13 +7,27 @@
     <%- include ("../partials/header") %> 
     
     <form action="" method="post">
-        <label for="name">name</label>
+        <label for="name">Nombre del Producto:</label>
         <input type="text" name="name">
 
-        <label for="description"></label>
+        <label for="description">Descripción:</label>
         <textarea name="description" cols="30" rows="10"></textarea>
 
-        
+        <label for="productImage">Fotos del producto:</label>
+        <input type="file" name="productImage" accept="image/*" multiple>
+
+        <label for="size">Talle:</label>
+        <select name="size" >
+            <option value="select">Seleccione Talle</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+
+        <label for="price">Precio:</label>
+        <input type="text" name="price" value="$">
+
+        <button>Guardar</button>
     </form>
 </body>
 </html>
