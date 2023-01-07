@@ -14,8 +14,22 @@ body{
 font-family: 'Roboto Slab', serif;
 background-color: var(--negro);
 }
-
+h2 {
+    color: #ff9f29;
+    text-align: center;
+}
 form {
+    font-size: 14px;
     color: #faf3e3;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-control {
+    display: flex;
+    gap: 2px;
+}
+  .txt-control {
+    border: solid 1px #ff9f29;
+    border-radius: 5px;
 }
