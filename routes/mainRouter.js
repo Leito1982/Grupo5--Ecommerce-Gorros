@@ -16,5 +16,6 @@ const path = require("path");
 
     router.get ('/productCreate', mainController.productCreate);
 
+    router.get ('/productEdit', mainController.productEdit);
 
 module.exports = router

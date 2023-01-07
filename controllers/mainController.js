@@ -20,11 +20,15 @@ const controller = {
     },
 
     productCart: (req, res) => {
-        res.render('./products/productCart', {style: '/css/styleProductCart.css', title: 'Product Cart'}) 
+        res.render('./products/productCart', {style: '/css/styleProductCart.css', title: 'Honky Caps - Product Cart'}) 
     },
 
     productCreate: (req, res) => {
-        res.render('./products/productCreate', {style: '/css/styleProductCreate.css', title: 'Product Create'}) 
+        res.render('./products/productCreate', {style: '/css/styleProductCreate.css', title: 'Honky Caps - Product Create'}) 
+    },
+
+    productEdit: (req, res) => {
+        res.render('./products/productEdit', {style: '/css/styleProductEdit.css', title: 'Honky Caps - Product Edit'}) 
     }
 
 }

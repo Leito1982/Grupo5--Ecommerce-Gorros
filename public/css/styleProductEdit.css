@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --primario: #faf3e3;
+    --secundario: #ff9f29;
+    --terciario: #1a4d2e;
+    --negro: black;
+    --blanco: white;
+}
+
+body{
+font-family: 'Roboto Slab', serif;
+background-color: var(--negro);
+}
+
+
+.nombre-producto {
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.info-producto {
+    text-align: center;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.imagen-principal {
+    display: flex;
+    height: 45%;
+    width: 45%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagen001 {
+    width: 50%;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 50%;
+    margin: 4%;
+    /* max-width: 390px; */
+    background-color: #ff9f29;
+    border: solid 4px #1a4d2e;
+    filter: drop-shadow(0px 0px 4px #ff9f29);
+}
+
+.imagenes-secundarias {
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.imagenes-secundarias img:hover {
+    transform: perspective(2000px) rotateY(30deg) translateX(-30px) translateZ(40px);
+    opacity: .6;
+
+}
+
+.imagen002 , 
+.imagen003,
+.imagen004 {
+    width: 20%;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 50%;
+    background-color: #ff9f29;
+    border: solid 4px #1a4d2e;
+    filter: drop-shadow(0px 0px 4px #ff9f29);
+
+}
+
+.nombre-producto {
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+.info-producto {
+    text-align: center;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+.precio {
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    color: var(--primario);
+    background-color: var(--terciario);
+    padding: 2px;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.editar {
+    text-align: center;
+    height: 30px;
+    width: 70px;
+    color: #faf3e3;
+    background-color: #1a4d2e;
+}
+
+@media (min-width: 769px) {
+    
+    main {
+        margin-top: 145px;
+        text-align: center;
+    }
+
+
+
+}
