@@ -6,29 +6,45 @@
 <body>
     <%- include ("../partials/header") %> 
     
+    <h2>Crear Producto</h2>
     <form action="" method="post">
-        <label for="name">Nombre del Producto:</label>
-        <input type="text" name="name">
 
-        <label for="description">Descripción:</label>
-        <textarea name="description" cols="30" rows="10"></textarea>
+        <div class="form-control">
+            <label for="name">Nombre del Producto:</label>
+            <input type="text" name="name" class="txt-control">
+        </div>
 
-        <label for="productImage">Fotos del producto:</label>
-        <input type="file" name="productImage" accept="image/*" multiple>
+        <div class="form-control">
+            <label for="description">Descripción:</label>
+            <textarea name="description" cols="30" rows="10" class="txt-control"></textarea>
+        </div>
 
-        <label for="size">Talle:</label>
-        <select name="size" >
-            <option value="select">Seleccione Talle</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-        </select>
+        <div class="form-control">
+            <label for="productImage">Fotos del producto:</label>
+            <input type="file" name="productImage" accept="image/*" multiple>
+        </div>
 
-        <label for="price">Precio:</label>
-        <input type="text" name="price" value="$">
+        <div class="form-control">
+            <label for="size">Talle:</label>
+            <select name="size" >
+                <option value="select">Seleccione Talle</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="price">Precio:</label>
+            <input type="text" name="price" value="$" class="txt-control">
+        </div>
 
         <button>Guardar</button>
+
     </form>
+
+    <!-- Script de los iconos -->
+    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
