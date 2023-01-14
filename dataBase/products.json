@@ -19,11 +19,10 @@
     },
     {
         "id": 3,
-        "name": "Gorra de Corona",
+        "name": "Gorra de Corona ",
         "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
         "image": "cor-1.jpg",
-        "category": "Coleccion",
-        "size": "m",
+        "category": "Musica",
         "price": 8091.09
     },
     {

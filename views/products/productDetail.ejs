@@ -8,19 +8,19 @@
     <%- include ("../partials/header") %> 
 
     <main class="main-style">
-        <h3 class="nombre-producto">Nombre de Modelo</h3>
-        <p class="info-producto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+        <h3 class="nombre-producto"><%= product.name %> </h3>
+        <p class="info-producto"><%= product.description %> </p>
         <div class="imagen-principal">
-            <img class="imagen001" src="/images/NY1.jpg" alt="imagen grande de detalle de producto">
+            <img class="imagen001" src="/images/<%= product.image %> " alt="imagen grande de detalle de producto">
         </div>
         <div class="imagenes-secundarias">
-            <img class="imagen002" src="/images/NY1.jpg" alt="imagen miniatura de detalle de producto">
-            <img class="imagen003" src="/images/NY2.jpg" alt="imagen miniatura de detalle de producto">
-            <img class="imagen004" src="/images/NY3.jpg" alt="imagen miniatura de detalle de producto">
+            <img class="imagen002" src="/images/<%= product.image %> " alt="imagen miniatura de detalle de producto">
+            <img class="imagen003" src="/images/<%= product.image %>" alt="imagen miniatura de detalle de producto">
+            <img class="imagen004" src="/images/<%= product.image %>" alt="imagen miniatura de detalle de producto">
         </div>
         <div class="boxes">
-        <p class="info-producto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        <h2 class="precio">PRECIO</h2>
+        <p class="info-producto"><%= product.description %> </p>
+        <h2 class="precio"><%= product.price %> </h2>
         <h3 class="cuotas">cuotas</h3>
         <p class="metodos-de-pago">Metodos de Pago</p>
         <div class="tarjetas">

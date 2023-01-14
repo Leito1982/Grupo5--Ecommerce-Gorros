@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', {title: 'Editar Producto', style: 'css/styleProductEdit.css'}) %> 
+<%- include('../partials/head', {title: 'Editar Producto', style: '/css/styleProductEdit.css'}) %> 
 
 <body>
     <%- include ("../partials/header") %> 
-
-    <main class="main-style">
-        <h3 class="nombre-producto">Nombre de Modelo</h3>
-        <button  class="editar">Editar</button>
-        <p class="info-producto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        <button class="editar" >Editar</button>
-        <div class="imagen-principal">
-            <img class="imagen001" src="/images/NY1.jpg" alt="imagen grande de detalle de producto">
-            <button class="editar" >Editar</button>
-        </div>
-        <div class="imagenes-secundarias">
-            <img class="imagen002" src="/images/NY1.jpg" alt="imagen miniatura de detalle de producto">
-            <button class="editar" >Editar</button>
-            <img class="imagen003" src="/images/NY2.jpg" alt="imagen miniatura de detalle de producto">
-            <button class="editar" >Editar</button>
-            <img class="imagen004" src="/images/NY3.jpg" alt="imagen miniatura de detalle de producto">
-            <button class="editar">Editar</button>
-        </div>
-        <div class="boxes">
-        <p class="info-producto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        <button  class="editar" >Editar</button>
-        <h2 class="precio">PRECIO</h2>
-        <button class="editar" >Editar</button>        
-        </div>    
-
-    <!-- <form action="" method="post">
-        <label for="name">Nombre del Producto:</label>
-        <input type="text" name="name">
-
-        <label for="description">Descripción:</label>
-        <textarea name="description" cols="30" rows="10"></textarea>
-
-        <label for="productImage">Fotos del producto:</label>
-        <input type="file" name="productImage" accept="image/*" multiple>
-
-        <label for="size">Talle:</label>
-        <select name="size" >
-            <option value="select">Seleccione Talle</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-        </select>
-
-        <label for="price">Precio:</label>
-        <input type="text" name="price" value="$">
-
-        <button>Guardar</button>
-    </form> -->
-    <%- include ("../partials/footer") %> 
     
+    <h2>Editar Producto</h2>
+    <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+        <div class="form-control">
+            <label for="name">Nombre del Producto:</label>
+            <input type="text" name="name" value="<%= product.name %> " class="txt-control">
+        </div>
+
+        <div class="form-control">
+            <label for="description">Descripción:</label>
+            <textarea name="description" class="txt-control"><%= product.description %></textarea>
+        </div>
+        <div class="form-control">
+            <label for="category">Categoría:</label>
+            <select name="category" >
+                <% if (product.category == "Deportivas") { %>
+                    <option value="Deportivas" selected>Deportivas</option>
+                    <option value="Coleccion">Colección</option>
+                    <option value="Musica">Música</option>
+                <% } else if (product.category == "Coleccion"){ %>
+                    <option value="Deportivas">Deportivas</option>
+                    <option value="Coleccion" selected>Colección</option>
+                    <option value="Musica">Música</option>
+                <% } else if (product.category == "Musica"){ %>
+                    <option value="Deportivas">Deportivas</option>
+                    <option value="Coleccion">Colección</option>
+                    <option value="Musica" selected>Música</option>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="image">Fotos del producto:</label>
+            <input type="file" name="image" accept="image/*" multiple>
+        </div>
+
+        <div class="form-control">
+            <label for="size">Talle:</label>
+            <select name="size" >
+                <% if (product.size == "S") { %>
+                    <option value="S" selected>S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                <% } else if (product.size == "M"){ %>
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                <% } else if (product.size == "L"){ %>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L" selected>L</option>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="price">Precio:</label>
+            <input type="number" name="price" value="<%=  product.price %>" class="txt-control">
+        </div>
+
+        <div class="botones">
+            <button type="submit">Guardar</button>
+            <button type="reset">Borrar</button>
+        </div>
+    </form>
+
     <!-- Script de los iconos -->
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
