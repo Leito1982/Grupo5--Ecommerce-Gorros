@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head') %> 
+<%- include('./partials/head', {title: 'Honky Caps', style: '/css/styleHome.css'}) %> 
 
 <body>
 
@@ -20,9 +20,9 @@
 
                 <% products.forEach(product => { %>
                  <article>
-                    <a href="/productDetail">
+                    <a href="/products/detail/<%= product.id %>">
                         <div class="imagen">
-                            <img src="<%= product.image %> " alt="foto">
+                            <img src="/images/<%= product.image %>" alt="foto">
                         </div>
                         <div class="descripcion">
                             <p><%= product.name %> </p>

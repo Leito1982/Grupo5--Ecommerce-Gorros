@@ -1,139 +1,101 @@
 [
     {
         "id": 1,
-        "product_name": "Gorra Adidas",
+        "name": "Gorra Adidas",
         "description": "viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
-        "image01": "../public/images/ADI1.jpg",
-        "image02": "../public/images/ADI2.jpg",
-        "image03": "../public/images/ADI3.jpg",
+        "image": "ADI1.jpg",
         "category": "Deportivas",
         "size": "M",
         "price": 6689.57
     },
     {
         "id": 2,
-        "product_name": "vel sem sed sagittis nam congue risus semper porta volutpat",
+        "name": "Gorra de Boca",
         "description": "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea",
-        "image": "prenda2.png",
-        "category": "Musica",
+        "image": "boc-1.jpg",
+        "category": "Deportivas",
         "size": "M",
         "price": 8205.49
     },
     {
         "id": 3,
-        "product_name": "dui",
+        "name": "Gorra de Corona",
         "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
-        "image": "prenda1.png",
+        "image": "cor-1.jpg",
         "category": "Coleccion",
-        "size": "M",
+        "size": "m",
         "price": 8091.09
     },
     {
         "id": 4,
-        "product_name": "amet cursus id turpis integer aliquet massa",
+        "name": "gorra de DUFF",
         "description": "sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at",
-        "image": "prenda1.png",
-        "category": "Deportivas",
+        "image": "DUF-1.jpg",
+        "category": "Coleccion",
         "size": "XS",
         "price": 5060.05
     },
     {
         "id": 5,
-        "product_name": "donec ut",
+        "name": "Gorra de Ferrari",
         "description": "in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec",
-        "image": "prenda3.png",
+        "image": "FER-1.jpg",
         "category": "Musica",
         "size": "S",
         "price": 8419.6
     },
     {
         "id": 6,
-        "product_name": "erat id mauris vulputate elementum nullam varius nulla facilisi cras",
+        "name": "Gorra de Honda",
         "description": "enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate",
-        "image": "prenda1.png",
+        "image": "HON-1.jpg",
         "category": "Musica",
         "size": "XL",
         "price": 5243.12
     },
     {
         "id": 7,
-        "product_name": "nulla tellus in sagittis dui",
+        "name": "Gorra de KTM",
         "description": "elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat",
-        "image": "prenda5.png",
+        "image": "KTM-1.jpg",
         "category": "Coleccion",
         "size": "M",
         "price": 5394.43
     },
     {
         "id": 8,
-        "product_name": "ut",
+        "name": "Gorra New York",
         "description": "facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus",
-        "image": "prenda4.png",
+        "image": "NY1.jpg",
         "category": "Musica",
         "size": "XL",
         "price": 5169.45
     },
     {
         "id": 9,
-        "product_name": "faucibus orci",
+        "name": "Gorra Puma",
         "description": "fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus",
-        "image": "prenda1.png",
+        "image": "PUM-1.jpg",
         "category": "Musica",
         "size": "M",
         "price": 6751.99
     },
     {
         "id": 10,
-        "product_name": "luctus cum sociis natoque penatibus et magnis dis",
+        "name": "Gorra de River",
         "description": "fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum",
-        "image": "prenda6.png",
+        "image": "riv-1.jpg",
         "category": "Deportivas",
         "size": "M",
         "price": 6168.98
     },
     {
         "id": 11,
-        "product_name": "vestibulum ante ipsum primis in faucibus",
+        "name": "Gorra de V46",
         "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
-        "image": "prenda4.png",
+        "image": "V46-1.jpg",
         "category": "Deportivas",
         "size": "XL",
         "price": 6064.21
-    },
-    {
-        "id": 12,
-        "product_name": "in libero ut massa volutpat convallis morbi odio odio elementum",
-        "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper",
-        "image": "prenda2.png",
-        "category": "Coleccion",
-        "size": "XS",
-        "price": 1859.86
-    },
-    {
-        "id": 13,
-        "product_name": "pellentesque",
-        "description": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl",
-        "image": "prenda4.png",
-        "category": "Musica",
-        "size": "S",
-        "price": 9586.93
-    },
-    {
-        "id": 14,
-        "product_name": "id nulla",
-        "description": "congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a",
-        "image": "prenda6.png",
-        "category": "Musica",
-        "size": "XS",
-        "price": 9322.57
-    },
-    {
-        "id": 15,
-        "product_name": "metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean",
-        "description": "vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
-        "image": "prenda1.png",
-        "category": "Deportivas",
-        "size": "M",
-        "price": 6128.9
     }
 ]

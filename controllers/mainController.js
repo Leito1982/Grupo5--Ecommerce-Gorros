@@ -1,35 +1,14 @@
-const products = require('../dataBase/products');
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../dataBase/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 
     index: (req, res) => {
         res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps', products})
     },
-
-    productDetail: (req, res) => {
-        res.render('./products/productDetail', {style: "/css/styleProductDetail.css", title: "Honky Caps - Detalle de Producto"}) 
-    },
-    
-    register: (req, res) => {
-        res.render('./user/register', {style:"/css/styleRegister.css", title: "Honky Caps - Register" }) 
-    },
-    
-    login: (req, res) => {
-        res.render('./user/login',  {style: "/css/stylelogin.css", title: 'Honky Caps - Login'} ) 
-        
-    },
-
-    productCart: (req, res) => {
-        res.render('./products/productCart', {style: '/css/styleProductCart.css', title: 'Honky Caps - Product Cart'}) 
-    },
-
-    productCreate: (req, res) => {
-        res.render('./products/productCreate', {style: '/css/styleProductCreate.css', title: 'Honky Caps - Product Create'}) 
-    },
-
-    productEdit: (req, res) => {
-        res.render('./products/productEdit', {style: '/css/styleProductEdit.css', title: 'Honky Caps - Product Edit'}) 
-    }
 
 }
 
