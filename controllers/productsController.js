@@ -7,17 +7,17 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	// Listado de productos
 	index: (req, res) => {
-	 	res.render('products', {products});
+	 	res.render('products/products', {products});
 	},
 
 	// Detalle de producto
 	detail: (req, res) => {
-		res.render('productDetail', {product: products.find(prod => prod.id == req.params.id)})
+		res.render('products/productDetail', {product: products.find(prod => prod.id == req.params.id)})
 	},
 
 	// Crear producto formulario
 	create: (req, res) => {
-		res.render('productCreate')	
+		res.render('products/productCreate')	
 	},
 	
 	// crear producto guardar
@@ -54,7 +54,7 @@ const controller = {
 
 	// Editar producto formulario
 	edit: (req, res) => {
-	 	res.render('productEdit', {product: products.find(prod => prod.id == req.params.id)})
+	 	res.render('products/productEdit', {product: products.find(prod => prod.id == req.params.id)})
 	},
 	// editar producto guardar
 	update: (req, res) => {
@@ -106,7 +106,7 @@ const controller = {
 		res.redirect('/products');
 	},
 	cart: (req, res) => {
-		res.render('productCart')
+		res.render('products/productCart')
 	}
 };
 
