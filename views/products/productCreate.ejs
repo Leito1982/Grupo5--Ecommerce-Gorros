@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head', {title: 'Crear Producto', style: '/css/styleProductCreate.css'}) %> 
 
 <body>
     <%- include ("../partials/header") %> 
     
     <h2>Crear Producto</h2>
-    <form action="" method="post">
+    <form action="/products/create" method="POST" enctype="multipart/form-data">
 
         <div class="form-control">
             <label for="name">Nombre del Producto:</label>
@@ -20,8 +20,8 @@
         </div>
 
         <div class="form-control">
-            <label for="productImage">Fotos del producto:</label>
-            <input type="file" name="productImage" accept="image/*" multiple>
+            <label for="image">Fotos del producto:</label>
+            <input type="file" name="image" accept="image/*" multiple>
         </div>
 
         <div class="form-control">
