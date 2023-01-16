@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', {title: 'Editar Producto', style: '/css/styleProductEdit.css'}) %> 
+<%- include('../partials/head', {title: 'Editar Producto', style: '/css/styleProductEdit.css'}) %>
 
 <body>
     <%- include ("../partials/header") %> 
@@ -63,7 +63,7 @@
 
         <div class="form-control">
             <label for="price">Precio:</label>
-            <input type="number" name="price" value="<%=  product.price %>" class="txt-control">
+            <input type="number" name="price" value="<%=product.price%>" class="txt-control" step="0.1">
         </div>
 
         <div class="botones">

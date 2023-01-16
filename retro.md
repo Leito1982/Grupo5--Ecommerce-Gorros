@@ -23,3 +23,33 @@ RETROSPECTIVA SPRINT 2:
 - Hacer menos: Por el momento nada.
 
 - Dejar de hacer: Por el momento nada.
+
+
+/*************************************************************************************/
+
+RETROSPECTIVA SPRINT 3:
+
+- Comenzar a hacer: Pruebas sobre la funcionalidad del sitio.
+
+- Hacer más: buscar la fortaleza de cada 
+
+- Continuar haciendo: detectamos una falla, y revisamos el sitio principal 
+
+- Hacer menos: Por el momento nada.
+
+- Dejar de hacer: Por el momento nada.
+
+
+/*************************************************************************************/
+
+RETROSPECTIVA SPRINT X:
+
+- Comenzar a hacer:
+
+- Hacer más: 
+
+- Continuar haciendo: 
+
+- Hacer menos: 
+
+- Dejar de hacer: 
