@@ -209,31 +209,22 @@ header nav {
     width: 15%;
 }
 
-.checkout {
+.botones {
     display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    justify-content:center;
+    gap: 20px;
+    margin: 10px 0px;
 }
-
-.agregar-al-carrito {
+.botones .button:hover {
+    border: solid 2px #ff9f29;
+}
+.botones .button {
     background-color: #1a4d2e;
-    color: #ff9f29;
+    color: #faf3e3;
+    font-size: 14px;
     padding: 5px;
     border-radius: 5px;
     width: 96px;
-    text-align: center;
-}
-
-.comprar {
-    background-color: #1a4d2e;
-    color: #ff9f29;
-    padding-top: 10px;
-    border-radius: 5px;
-    width: 96px;
-    text-align: center;
-    vertical-align: middle;
 }
 
 

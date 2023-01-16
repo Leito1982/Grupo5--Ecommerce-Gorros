@@ -49,7 +49,7 @@ const controller = {
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 
-		res.redirect('/products')
+		res.redirect('/')
 	},
 
 	// Editar producto formulario
@@ -93,7 +93,7 @@ const controller = {
 		})
 			fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 		
-			res.redirect('/products');
+			res.redirect('/');
 	},
 
 	// Eliminar producto
@@ -103,7 +103,7 @@ const controller = {
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(productsNoDelete));
 
-		res.redirect('/products');
+		res.redirect('/');
 	},
 	cart: (req, res) => {
 		res.render('products/productCart')

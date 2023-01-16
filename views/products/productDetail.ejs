@@ -32,9 +32,13 @@
         </div>
         </div>
         
-        <div class="checkout">
-            <a class="comprar" href="Comprar">Comprar</a>
-            <a class="agregar-al-carrito" href="/productCart">Agregar al Carrito</a>
+        <div class="botones">
+            <a class="button" href="Comprar">Comprar</a>
+            <a class="button" href="/productCart">Agregar al Carrito</a>
+            <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST" >
+            <button class="button" href="eliminar-producto">Eliminar Producto</button>
+            </form>
+            <a class="button" href="/products/edit/<%=product.id%>">Editar Producto</a>
         </div>
     </main>
 
