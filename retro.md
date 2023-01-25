@@ -42,6 +42,21 @@ RETROSPECTIVA SPRINT 3:
 
 /*************************************************************************************/
 
+RETROSPECTIVA SPRINT 4:
+
+- Comenzar a hacer: Comenzar a buscar soluciones alternativas a problemas que se nos presentaron.
+
+- Hacer más: Redoblar el tiempo de trabajo.
+
+- Continuar haciendo: Estamos todos trabajando en la misma sintonia, tenemos que mantener eso.
+
+- Hacer menos: Por el momento nada.
+
+- Dejar de hacer: Por el momento nada.
+
+
+/*************************************************************************************/
+
 RETROSPECTIVA SPRINT X:
 
 - Comenzar a hacer:
