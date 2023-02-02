@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <%- include('../partials/head', {title: 'Registrarse', style: '/css/styleRegister.css'}) %> 
+    <%- include('../partials/head', {title: 'Registrarse', style: '/css/styleProductCreate.css'}) %> 
 
 </head>
 
@@ -10,69 +10,35 @@
     <%- include ("../partials/header") %> 
    
     <main>
-         <!-- ARTICULOS DE MUESTRAS -->
-    <section class="muestra">
-        <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img class="imagen1" src="/images/HON-1.jpg" alt="Imagen"> </a> 
-        <a href="/productDetail"> <img id= "cuartaImagen" class="imagen1" src="/images/KTM-1.jpg" alt="Imagen"> </a> 
-    </section>
-
-    <form class="inicio" action="#" method="post">
         <h2> REGISTRO </h2>
         
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo magnam nostrum aspernatur quia fugiat
-            quibusdam expedita.</p>
-            <p class="p2"> Complete los siguientes campos y disfrute de mas beneficios! </p>
+            <p class="p2"> Complete los siguientes campos y disfrute de mas beneficios! </p><br>
             
-      <div class="container-forms">
-        <div class="container-1">
-    <div class="nombre">
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre"> 
-    </div>
-    <div class="apellido">
-    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-    </div>
-    <div class="telefono">
-    <input type="number" name="Telefono" id="Telefono" placeholder="Telefono">
-    </div>
-    </div>
-    <div class="container-2">
-    <div class="email">
-    <input type="email" name="email" id="email" placeholder="Mail">
-    </div>
-    <div class="email">
-    <input type="email" name="email-repetido" id="email-repetido" placeholder="Repetir Mail">
-    </div>
-    <div class="password">
-    <input type="password" name="password" id="password" placeholder="ingresar contraseña">
-    </div>
-    </div>
-    </div>
-        <div class="bottom-register">
-        <button class="registrarse"> Crear cuenta </button>
-        </div>
-  
-    </form>
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
 
-    <%- include ("../partials/footer") %> 
-
-    <!-- <footer>
-        <article class="contacto-redes">
-            <div class="contacto">
-                <a href="mailito:elgorro@honkycaps.com">elgorro@honkycaps.com</a>
-                <a href="">Av. De La Gorra 452 Bs. As.</a>
-                <a href="">(5411) 3638-9956</a>
-            </div>    
-            <div class="redes">
-                <a href="https:/www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https:/www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https:/www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </article>
-
-        <p>Hecho por grupo 5 &copy 2022 - todos los derechos reservados. </p>
-    </footer> -->
+                <div class="form-control">
+                    <label for="firstName">Nombre:</label>
+                    <input type="text" name="firstName" class="txt-control">
+                </div>
+                <div class="form-control">
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" name="lastName" class="txt-control">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="txt-control">
+                </div>
+                                
+                <div class="form-control">
+                    <label for="image">Fotos de perfil:</label>
+                    <input type="file" name="image" accept="image/*">
+                </div>
+    
+                <div class="botones">
+                    <button type="submit">Guardar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
 
 </main>
 
