@@ -14,21 +14,39 @@
         
             <p class="p2"> Complete los siguientes campos y disfrute de mas beneficios! </p><br>
             
-            <form action="/products/create" method="POST" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
 
                 <div class="form-control">
                     <label for="firstName">Nombre:</label>
-                    <input type="text" name="firstName" class="txt-control">
+                    <input type="text" name="firstName" class="txt-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>">
                 </div>
+                <% if (locals.errors && errors.firstName) { %>
+                    <div class="text-danger">
+                        <%= errors.firstName.msg %> 
+                    </div>
+                <% } %>
                 <div class="form-control">
                     <label for="lastName">Apellido:</label>
                     <input type="text" name="lastName" class="txt-control">
                 </div>
                 <div class="form-control">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" class="txt-control">
+                    <input type="email" name="email" class="txt-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
-                                
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                <div class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="txt-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+                </div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>                                
                 <div class="form-control">
                     <label for="image">Fotos de perfil:</label>
                     <input type="file" name="image" accept="image/*">

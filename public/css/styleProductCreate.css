@@ -60,7 +60,13 @@ form {
     border-radius: 5px;
     width: 96px;
 }
-
+.text-danger {
+    color: red;
+}
+.is-invalid {
+    border: solid 1px red;
+    
+}
 @media (min-width: 769px) {
     
     h2 {
