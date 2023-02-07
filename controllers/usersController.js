@@ -44,7 +44,28 @@ const controller = {
 
     login: (req, res) => {
     res.render('users/login');
-    }
+    },
+
+    processLogin: (req, res) => {
+        let userToLogin = Users.findByField('email', req.body.email);
+
+        if(userToLogin){
+
+            if ( bcrypt.compareSync(req.body.password, userToLogin.password)){
+                
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.rememberUser){
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 });
+                }
+                return res.redirect('/')
+            }
+            return res.render('./users/login', {errors: {email: {msg: 'Las credenciales son inválidas'}}, oldData: req.body})
+        }
+            return res.render('./users/login', {errors: {email: {msg: 'El email no es correcto'}}})
+    },
+    
 }
 
 module.exports = controller;

@@ -3,94 +3,48 @@
 
 <%- include('../partials/head',{title: 'Login', style: '/css/styleLogin.css'}) %> 
 
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylelogin.css">
-    <title>Login</title>
-</head> -->
-
 <body>
-
-    <!-- ENCABEZADO SACADO DE INDEX -->
-<%- include ("../partials/header") %> 
-
-    <!-- <header>
-        <div class="top-bar">
-         <a href="/" >   <img src="/images/LOGO NEGRO.svg" alt="logo"> </a>
-            
-            <div class="search-bar-container">
-                <input type="search-text" placeholder="Buscar">
-                <i class="fa fa-search"></i>
-            </div>
-            
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <button class="burger-menu"><i class="fa fa-bars"></i></button>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Historial</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Log In</a></li>
-            </ul>
-        </nav>
-    </header> -->
-
-    <main>
+    <%- include ("../partials/header") %> 
 
         <!-- ARTICULOS DE MUESTRAS -->
-        <section class="muestra">
+        <!-- <section class="muestra">
             <a href="/productDetail"> <img class="imagen1" src="/images/DUF-1.jpg" alt="Imagen"> </a> 
             <a href="/productDetail"> <img class="imagen1" src="/images/FER-1.jpg" alt="Imagen"> </a> 
             <a href="/productDetail"> <img class="imagen1" src="/images/HON-1.jpg" alt="Imagen"> </a> 
             <a href="/productDetail"> <img id= "cuartaImagen" class="imagen1" src="/images/KTM-1.jpg" alt="Imagen"> </a> 
             
-        </section>
-        
-        <form class="inicio" action="#" method="post">
+        </section>    -->
     <h2> INICIO DE SESION </h2>
     
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo magnam nostrum aspernatur quia fugiat
         quibusdam expedita.</p>
-        
-        <label for="usuario"> Ingrese Correo Electronico / Usuario / Telefono Movil </label>
-        <input type="text" name="usuario" id="usuario" placeholder="fulano@gmail.com">
-        
-        <label for="pass"> Ingrese su palabra clave </label>
-        <input type="password" name="pass" minlength="8">
-        
-        <button class="ingresar"> Ingresar </button>
-        <button class="registrarse"> Registrarse </button>
-        <button class="pass"> Olvido su palabra clave?</button>
-        
-        
-    </form>
-    
-    <%- include ("../partials/footer") %> 
-    
-    <!-- <footer class="footer-style">
-        <d class="contacto">
-            Contacto, Direccion, Copyright
-        </d>
-        <d class="redes">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </d>
-        
-    </footer> -->
+
+        <form action="/users/login" method="POST">
+            <div class="form-camp">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" value="<%= locals.oldData ? oldData.email : null %>">
+            </div>
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
+            <div class="form-camp">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-input">
+            </div>
+            <div class="form-camp">
+                <label for="recordame" class="form-label">Recordarme</label>
+                <input type="checkbox" name="rememberUser" class="form-input-remember">
+            </div>
+            <div class="botones">
+            <button type="submit" class="button">Login</button>
+            <a href="/users/register" class="registrarse">Registrarse</a>
+            <a href="#" class="pass">Olvidó su contraseña?</a>
+            </div>
+        </form> 
     
     <!-- Script de los iconos -->
-</main>
 
 <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 
