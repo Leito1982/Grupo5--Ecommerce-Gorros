@@ -31,7 +31,7 @@
             <li><a href="/products/create">Crear Producto</a></li>
         </ul>
         <% if (locals.isLogged) { %>
-            <p class="bienvenida">Bienvenid@ <%= locals.userLogged.email %></p>
+            <p class="bienvenida">Bienvenid@ <%= locals.userLogged.firstName %></p>
             <% } %>    
         <ul>
             <li><a href="/users/register">Registrarse</a></li>
