@@ -30,9 +30,13 @@
             <li><a href="#">Historial</a></li>
             <li><a href="/products/create">Crear Producto</a></li>
         </ul>
+        <% if (locals.isLogged) { %>
+            <p class="bienvenida">Bienvenid@ <%= locals.userLogged.email %></p>
+            <% } %>    
         <ul>
             <li><a href="/users/register">Registrarse</a></li>
             <li><a href="/users/login">Log In</a></li>
+            <li><a href="/users/logout">Logout</a></li>
         </ul>
     </nav>
 </header>

@@ -65,6 +65,12 @@ const controller = {
         }
             return res.render('./users/login', {errors: {email: {msg: 'El email no es correcto'}}})
     },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/')
+    }
     
 }
 
