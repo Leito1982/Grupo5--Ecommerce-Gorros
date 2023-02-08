@@ -43,5 +43,14 @@
   "password": "$2a$10$CT00D8XMHbVq7tv6yBtZt.gKjlvKEHBhXwAj1IbF3EyJlbvAAHeoK",
   "category": "Customer",
   "image": "userImage-default.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Felix",
+  "lastName": "Doura",
+  "email": "felixdoura@hotmail.com",
+  "password": "$2a$10$.IZDkPfcfp0RYw7OZjYsIeI6jg7jnz1g6sqTegH5jrnhUvxF/M8wW",
+  "category": "Customer",
+  "image": "userImage-default.png"
  }
 ]
