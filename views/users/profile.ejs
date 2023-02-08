@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Perfil Usuario', style: '/css/styleProfile.css'}) %>
+<body>
+    <%- include ("../partials/header") %> 
+    
+    <h1>Hola <%= locals.userLogged.firstName %> </h1>
+    <br>
+        <article>
+            <img src="/images/users/<%= user.image %>" alt="foto-perfil"> <br>
+            <p><%= user.firstName %> </p><br>
+            <p><%= user.lastName %> </p><br>
+            <p><%= user.email %> </p><br>
+            
+        </article>
+</body>
+</html>

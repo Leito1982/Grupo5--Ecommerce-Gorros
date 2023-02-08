@@ -66,6 +66,10 @@ const controller = {
             return res.render('./users/login', {errors: {email: {msg: 'El email no es correcto'}}})
     },
 
+    profile: (req, res) => {
+        res.render('./users/profile', { user: req.session.userLogged})
+    },
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
