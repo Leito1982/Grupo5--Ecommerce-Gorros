@@ -4,13 +4,13 @@
 <body>
     <%- include ("../partials/header") %> 
     
-    <h1>Hola <%= locals.userLogged.firstName %> </h1>
+    <h1 class="titulo-bienvenida">Hola <%= locals.userLogged.firstName %> </h1>
     <br>
         <article>
-            <img src="/images/users/<%= user.image %>" alt="foto-perfil"> <br>
-            <p><%= user.firstName %> </p><br>
-            <p><%= user.lastName %> </p><br>
-            <p><%= user.email %> </p><br>
+            <img class="foto-perfil" src="/images/users/<%= user.image %>" alt="foto-perfil"> <br>
+            <p class="username"><%= user.firstName %> </p><br>
+            <p class="last-name"><%= user.lastName %> </p><br>
+            <p class="email"><%= user.email %> </p><br>
             
         </article>
 </body>

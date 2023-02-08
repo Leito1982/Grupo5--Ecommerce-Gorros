@@ -14,6 +14,7 @@ h1 {
     color: #ff9f29;
     text-align: center;
 }
+
 article {
     display: flex;
     justify-content: center;
@@ -22,11 +23,19 @@ article {
 }
 
 img {
-    width: 80px;
+    width: 120px;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 p {
     color: #ff9f29;
+}
+
+.username, .last-name, .email{
+    background-color: #1a4d2e;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 @media (min-width: 769px) {
