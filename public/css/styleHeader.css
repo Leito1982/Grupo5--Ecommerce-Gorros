@@ -63,6 +63,11 @@ header {
 header nav {
     display: none;
 }
+.bienvenida {
+    font-size: 20px;
+    color: #ff9f29;
+    margin: 0px;
+}
 
 
 @media (min-width: 769px) {

@@ -35,10 +35,14 @@
         <div class="botones">
             <a class="button" href="Comprar">Comprar</a>
             <a class="button" href="/productCart">Agregar al Carrito</a>
-            <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST" >
-            <button class="button" href="eliminar-producto">Eliminar Producto</button>
-            </form>
-            <a class="button" href="/products/edit/<%=product.id%>">Editar Producto</a>
+            
+            <% if (locals.isLogged && locals.userLogged.category == 'Admin') { %>
+                <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST" >
+                    <button class="button" href="eliminar-producto">Eliminar Producto</button>
+                    </form>
+                    <a class="button" href="/products/edit/<%=product.id%>">Editar Producto</a>               
+            <% } %>
+            
         </div>
     </main>
 

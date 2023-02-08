@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --primario: #faf3e3;
+    --secundario: #ff9f29;
+    --terciario: #1a4d2e;
+    --negro: black;
+    --blanco: white;
+}
+
+h1 {
+    color: #ff9f29;
+    text-align: center;
+}
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 80px;
+}
+
+p {
+    color: #ff9f29;
+}
+
+@media (min-width: 769px) {
+ 
+    h1 {
+        margin-top: 160px;
+    }
+    
+}

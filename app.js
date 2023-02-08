@@ -1,5 +1,8 @@
 const express = require("express");
 const methodOverride =  require('method-override')
+const session = require('express-session');
+const cookieParser = require('cookie-parser')
+const userLogged = require('./middlewares/userLogged');
 
 const app = express();
 
@@ -8,13 +11,19 @@ const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
 
 // Middleware
-app.use(express.static("public"));
-
+app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: 'Esto es secreto!!',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(cookieParser());
+app.use(userLogged);
 
-app.set('view engine', 'ejs');
+app.use(express.static("public"));
 
 // Rutas
 app.use ("/", mainRouter)
