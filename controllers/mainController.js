@@ -1,13 +1,19 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../dataBase/models');
+const sequelize = db.sequelize;
 
-const productsFilePath = path.join(__dirname, '../dataBase/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//Otra forma de llamar a los modelos
+const Products = db.Product;
+
 
 const controller = {
 
     index: (req, res) => {
-        res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps', products})
+
+        Products.findAll()
+            .then(products => {
+                res.render('index', {style: "/css/styleHome.css", title: 'Honky Caps', products: products})
+            })
+
     },
 
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Eliminar producto', style: '/css/styleHome.css'}) %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <br>
+    <h1>Seguro de <span>ELIMINAR</span> el producto: <%= product.name %>? </h1>
+    <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
+        <div class="botones">
+            <button type="submit">ELIMINAR</button>
+
+        </div>
+    </main>
+    
+</body>
+</html>

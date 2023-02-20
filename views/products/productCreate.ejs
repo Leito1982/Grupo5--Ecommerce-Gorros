@@ -18,15 +18,6 @@
             <label for="description">Descripción:</label>
             <textarea name="description" cols="30" rows="10" class="txt-control"></textarea>
         </div>
-        <div class="form-control">
-            <label for="category">Categoría:</label>
-            <select name="category" >
-                <option value="select">Seleccione Categoría</option>
-                <option value="Deportivas">Deportivas</option>
-                <option value="Coleccion">Colección</option>
-                <option value="Musica">Música</option>
-            </select>
-        </div>
 
         <div class="form-control">
             <label for="image">Fotos del producto:</label>
@@ -34,19 +25,32 @@
         </div>
 
         <div class="form-control">
-            <label for="size">Talle:</label>
-            <select name="size" >
-                <option value="select">Seleccione Talle</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-            </select>
-        </div>
-
-        <div class="form-control">
             <label for="price">Precio:</label>
             <input type="number" name="price" class="txt-control">
         </div>
+        
+        <div class="form-control">
+            <label for="category">Categoría:</label>
+            <select name="category" >
+                <% categories.forEach(category => { %>
+
+                    <option value="<%= category.id %>"><%= category.category_name %></option>
+
+                <% }) %>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="size">Talle:</label>
+            <select name="size" >
+                <% sizes.forEach(size => { %>
+
+                    <option value="<%= size.id %>"><%= size.size_name %></option>
+                 
+                <% }) %>   
+            </select>
+        </div>
+
+        
 
         <div class="botones">
             <button type="submit">Guardar</button>

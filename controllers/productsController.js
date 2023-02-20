@@ -1,23 +1,45 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-const productsFilePath = path.join(__dirname, '../dataBase/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//Otra forma de llamar a los modelos
+const Products = db.Product;
+const Category = db.Category;
+const Size = db.Size;
+
+// const fs = require('fs');
+// const path = require('path');
+
+// const productsFilePath = path.join(__dirname, '../dataBase/products.json');
+// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	// Listado de productos
 	index: (req, res) => {
-	 	res.render('products/products', {products});
+
+		Products.findAll()
+            .then(products => {
+                res.render('products/products', {products: products})
+            })
 	},
 
 	// Detalle de producto
 	detail: (req, res) => {
-		res.render('products/productDetail', {product: products.find(prod => prod.id == req.params.id)})
+
+		Products.findByPk(req.params.id)
+            .then(product => {
+                res.render('products/productDetail', {product});
+            });
 	},
 
-	// Crear producto formulario
+	// formulario crear producto
 	create: (req, res) => {
-		res.render('products/productCreate')	
+		let promCategory = Category.findAll();
+		let promSize = Size.findAll();
+
+		Promise.all([promCategory, promSize])
+            .then(([categories, sizes]) => {
+                res.render('products/productCreate', {categories: categories, sizes: sizes})
+            })	
 	},
 	
 	// crear producto guardar
@@ -31,37 +53,38 @@ const controller = {
 			img = 'descargar.jpeg'
 		}
 
-		console.log(req.file)
+		Products.create({
+            name: req.body.name,
+            description: req.body.description,
+            image: img,
+            price: req.body.price,
+            category_id: req.body.category,
+            size_id: req.body.size
+        })
+		.then(product => {
+            res.redirect('/')
+        });
 
-	 	let productToCreate = {
-
-			id: products[products.length -1].id + 1,
-			name: req.body.name,
-			description: req.body.description,
-			image: img,
-			category: req.body.category,
-			soze: req.body.size,
-			price: Number(req.body.price)
-		}
-		console.log(productToCreate);
-
-		products.push(productToCreate);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-		res.redirect('/')
 	},
 
-	// Editar producto formulario
+	// formulario editar producto
 	edit: (req, res) => {
-	 	res.render('products/productEdit', {product: products.find(prod => prod.id == req.params.id)})
+
+		Products.findOne({
+			where: {id: req.params.id},
+			include: [{association: 'category'}, {association: 'size'}]
+		})
+        .then(product => {
+            res.render('products/productEdit', {product: product})
+        })
 	},
+
 	// editar producto guardar
 	update: (req, res) => {
 
-		let productToEdit  = products.find(prod => prod.id == req.params.id);
+		let productToEdit  = Products.findByPk(req.params.id);
 
-		let img
+	   let img
 
 		if(req.file != undefined){
 			img = req.file.filename
@@ -69,42 +92,43 @@ const controller = {
 			img = productToEdit.image
 		}
 
-		console.log(req.file)
-
-		productToEdit = {	
-			id: Number(req.params.id),
-			name: req.body.name,
-			description: req.body.description,
-			image: img,
-			category: req.body.category,
-			soze: req.body.size,
-			price: Number(req.body.price)
-		}
-		console.log(productToEdit);
-
-		let newProduct = products.map(product => {
-			if(product.id == req.params.id){
-				
-				return product = {...productToEdit}
-
-			}
-				return product;
-			
-		})
-			fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
-		
-			res.redirect('/');
+        Products.update(
+            {
+                name: req.body.name,
+                description: req.body.description,
+                image: img,
+                price: req.body.price,
+                category_id: req.body.category,
+				size_id: req.body.size
+            },
+            {
+                where: {id: req.params.id}
+            }
+        )
+        .then(product => {
+            res.redirect('/');
+        })
 	},
 
-	// Eliminar producto
+	confirmDelete: (req, res) => {
+		Products.findByPk(req.params.id)
+		.then(product => {
+			res.render('products/productDelete', {product: product})
+		}) 
+	   },
+
+	// Eliminar producto	
 	 destroy : (req, res) => {
-	 
-		let productsNoDelete = products.filter(product => product.id != req.params.id);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(productsNoDelete));
 
-		res.redirect('/');
+		Products.destroy({
+			where: {id: req.params.id}
+		})
+		.then(product => {
+			res.redirect('/');
+		})
 	},
+
+	// Carrito de compras
 	cart: (req, res) => {
 		res.render('products/productCart')
 	}

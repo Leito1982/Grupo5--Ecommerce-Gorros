@@ -150,6 +150,12 @@ h3 {
     border-radius: 5px;
     width: 96px;
 }
+h1 {
+    color: #ff9f29;
+}
+span {
+    color: red;
+}
 
 /********************KEYFRAMES**********************************/
 
