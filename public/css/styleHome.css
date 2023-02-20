@@ -156,6 +156,20 @@ h1 {
 span {
     color: red;
 }
+.volver:hover {
+    border: solid 2px #ff9f29;
+}
+.volver {
+    text-decoration: none;
+    background-color: #1a4d2e;
+    color: #faf3e3;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 96px;
+    text-align: center;
+
+}
 
 /********************KEYFRAMES**********************************/
 
