@@ -20,12 +20,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Level = sequelize.define(alias, cols, config)
 
-    Category.associate = function(models) {
-        Category.hasMany(models.Product,{
-            foreignKey: 'level_id',
-            as: 'products'
-        })
-    } 
-
+   
     return Level;
 }
