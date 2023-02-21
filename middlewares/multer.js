@@ -3,7 +3,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      if(req.headers.referer == 'http://localhost:3000/products/create' || req.headers.referer == 'http://localhost:3000/products/edit/:id/') {
+      if(req.headers.referer == 'http://localhost:3000/products/create' || req.headers.referer == 'http://localhost:3000/products/edit/' + req.params.id) {
         return cb(null, 'public/images')
       }
         return cb(null, 'public/images/users')  
