@@ -6,12 +6,6 @@ const Products = db.Product;
 const Category = db.Category;
 const Size = db.Size;
 
-// const fs = require('fs');
-// const path = require('path');
-
-// const productsFilePath = path.join(__dirname, '../dataBase/products.json');
-// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const controller = {
 	// Listado de productos
 	index: (req, res) => {
