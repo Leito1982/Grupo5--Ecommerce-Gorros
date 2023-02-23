@@ -5,7 +5,7 @@ function userLogged (req, res, next) {
 
     let emailInCookie = req.cookies.userEmail;
     let userFromCookie = Users.findByField('email', emailInCookie);
-    // console.log(userFromCookie);
+    // return console.log(userFromCookie);
 
     if(userFromCookie) {
         req.session.userLogged = userFromCookie;

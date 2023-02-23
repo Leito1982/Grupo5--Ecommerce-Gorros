@@ -23,7 +23,7 @@
   "lastName": "Doura",
   "email": "felixdoura@hotmail.com",
   "password": "$2a$10$.IZDkPfcfp0RYw7OZjYsIeI6jg7jnz1g6sqTegH5jrnhUvxF/M8wW",
-  "category": "Customer",
+  "category": "Admin",
   "image": "userImage-default.png"
  }
 ]
