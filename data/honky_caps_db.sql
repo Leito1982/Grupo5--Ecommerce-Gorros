@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS honky_caps_db;
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
@@ -126,18 +127,10 @@ CREATE TABLE `users` (
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `password` varchar(8) NOT NULL,
+  `password` varchar(200) NOT NULL,
   `image` varchar(250) NOT NULL,
   `level_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `image`, `level_id`) VALUES
-(1, 'Emiliano', 'Torres', 'torresdragon@hotmail.com', '12345678', 'userImage-default.png', 1),
-(2, 'Bob', 'Marley', 'marley@hotmail.com', '12345678', 'images.jpg', 2);
 
 --
 -- Índices para tablas volcadas
