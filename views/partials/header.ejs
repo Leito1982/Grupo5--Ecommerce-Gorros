@@ -16,8 +16,12 @@
             <input type="search-text" placeholder="Buscar">
             <i class="fa fa-search"></i>
         </div>
-        
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <% if (locals.isLogged) { %>
+            <div class="avatar">
+                <img class="userImage" src="/images/users/<%= locals.isLogged.image %>" style="border-radius: 100%;" alt="foto">
+                <p class="bienvenida">Bienvenid@ <%= locals.isLogged.first_name %></p>
+            </div>
+            <% } %> 
         
         <button class="burger-menu"><i class="fa fa-bars"></i></button>
     </div>
@@ -32,10 +36,9 @@
                 <li><a href="/products/create">Crear Producto</a></li>                
             <% } %>
         </ul>
-        <% if (locals.isLogged) { %>
-            <p class="bienvenida">Bienvenid@ <%= locals.isLogged.first_name %></p>
-            <% } %>    
+           
         <ul>
+            <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
             <% if (locals.isLogged) { %>
                 <li><a href="/users/profile">Perfil</a></li>
                 <li><a href="/users/logout">Logout</a></li>
