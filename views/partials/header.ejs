@@ -28,12 +28,12 @@
             <li><a href="#">Categorias</a></li>
             <li><a href="#">Ofertas</a></li>
             <li><a href="#">Historial</a></li>
-            <% if (locals.isLogged && locals.userLogged.category == 'Admin') { %>
+            <% if (locals.isLogged && locals.isLogged.level.level == 'Admin') { %>
                 <li><a href="/products/create">Crear Producto</a></li>                
             <% } %>
         </ul>
         <% if (locals.isLogged) { %>
-            <p class="bienvenida">Bienvenid@ <%= locals.userLogged.firstName %></p>
+            <p class="bienvenida">Bienvenid@ <%= locals.isLogged.first_name %></p>
             <% } %>    
         <ul>
             <% if (locals.isLogged) { %>

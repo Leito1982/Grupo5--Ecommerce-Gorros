@@ -1,25 +1,45 @@
-const Users = require('../models/Users');
+//const Users = require('../models/Users');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+//Otra forma de llamar a los modelos
+const Users = db.User;
 
 function userLogged (req, res, next) {
+    
     res.locals.isLogged = false;
-
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = Users.findByField('email', emailInCookie);
-    // return console.log(userFromCookie);
-
-    if(userFromCookie) {
-        req.session.userLogged = userFromCookie;
-    }
 
     if(req.session.userLogged){
 
-    res.locals.isLogged = true;
+        res.locals.isLogged = req.session.userLogged
 
-    res.locals.userLogged = req.session.userLogged;
+        // if (req.session.userEdit) {
 
+        //     res.locals.isLogged = req.session.userEdit;
+           
+        // }
+        return next();
+
+    } else if (req.cookies.userEmail) {
+
+        Users.findOne({
+            where: {email: req.cookies.userEmail},
+            include: [{association: 'level'}]
+            })  
+            .then(userFromCookie => {
+                
+                delete userFromCookie.password;
+                req.session.userLogged = userFromCookie;
+                res.locals.isLogged = userFromCookie
+
+                return next();
+                                        
+            }) 
+    } else {
+
+        return next();
     }
 
-    next();
 }
 
 module.exports = userLogged;
