@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({
   secret: 'Esto es secreto!!',
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 }));
 app.use(cookieParser());
 app.use(userLogged);
