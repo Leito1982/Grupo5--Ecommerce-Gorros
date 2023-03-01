@@ -1,10 +1,9 @@
-CREATE DATABASE IF NOT EXISTS honky_caps_db;
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-02-2023 a las 01:26:58
+-- Tiempo de generación: 01-03-2023 a las 01:12:05
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -21,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `honky_caps_db`
 --
+DROP DATABASE IF EXISTS `honky_caps_db`;
+CREATE DATABASE `honky_caps_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `honky_caps_db`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `category`
 --
 
+DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `category_name` varchar(100) NOT NULL
@@ -48,6 +51,7 @@ INSERT INTO `category` (`id`, `category_name`) VALUES
 -- Estructura de tabla para la tabla `level`
 --
 
+DROP TABLE IF EXISTS `level`;
 CREATE TABLE `level` (
   `id` int(11) NOT NULL,
   `level` varchar(100) NOT NULL
@@ -67,6 +71,7 @@ INSERT INTO `level` (`id`, `level`) VALUES
 -- Estructura de tabla para la tabla `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -100,6 +105,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`, `category
 -- Estructura de tabla para la tabla `size`
 --
 
+DROP TABLE IF EXISTS `size`;
 CREATE TABLE `size` (
   `id` int(11) NOT NULL,
   `size_name` varchar(100) NOT NULL
@@ -122,6 +128,7 @@ INSERT INTO `size` (`id`, `size_name`) VALUES
 -- Estructura de tabla para la tabla `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `first_name` varchar(100) NOT NULL,
@@ -131,6 +138,13 @@ CREATE TABLE `users` (
   `image` varchar(250) NOT NULL,
   `level_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `image`, `level_id`) VALUES
+(5, 'Emiliano', 'Torres', 'torresdragon@hotmail.com', '$2a$10$QCDzBYzfUJ5XNgvXR/ebHOIQ2FsEjKazQZ4OfOPSZkOXb4ggy6Pli', 'userImage-default.png', 1);
 
 --
 -- Índices para tablas volcadas
@@ -189,7 +203,7 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `size`
@@ -201,7 +215,7 @@ ALTER TABLE `size`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
