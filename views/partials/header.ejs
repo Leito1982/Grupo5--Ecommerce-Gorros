@@ -11,11 +11,13 @@
 <header>
     <div class="top-bar">
             <img src="/images/logo-6-enero.jpeg" alt="logo">
-        
-        <div class="search-bar-container">
-            <input type="search-text" placeholder="Buscar">
-            <i class="fa fa-search"></i>
-        </div>
+
+            <form action="/products/search" method="POST">
+                <div class="search-bar-container">
+                    <input type="search-text" name="searchTxt" placeholder="Buscar">
+                    <button class="search"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
         <% if (locals.isLogged) { %>
             <div class="avatar">
                 <img class="userImage" src="/images/users/<%= locals.isLogged.image %>" style="border-radius: 100%;" alt="foto">

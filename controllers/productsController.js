@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 //Otra forma de llamar a los modelos
 const Products = db.Product;
@@ -103,6 +104,20 @@ const controller = {
             res.redirect('/');
         })
 	},
+	search: (req, res) => {
+
+        Products.findAll({
+            where: {
+                name: {
+                    [Op.like]: '%'+req.body.searchTxt+'%'
+                  }    
+            }
+        })
+        .then(products => {
+            
+            res.render('./products/products', {products: products});
+            })
+        },
 
 	confirmDelete: (req, res) => {
 		Products.findByPk(req.params.id)

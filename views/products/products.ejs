@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', {title: 'Resultado de la busqueda', style: '/css/styleHome.css'}) %> 
+
+<body>
+
+    <%- include ("../partials/header") %> 
+
+    <main>
+        <h3>Resultado de la búsqueda</h3>
+        <section class="tarjetas-producto">
+
+                <% products.forEach(product => { %>
+                 <article>
+                    <a href="/products/detail/<%= product.id %>">
+                        <div class="imagen">
+                            <img src="/images/<%= product.image %>" alt="foto">
+                        </div>
+                        <div class="descripcion">
+                            <p><%= product.name %> </p>
+                            <p>$<%= product.price %> </p>
+                        </div>
+                    </a>
+                </article>
+                <% }) %>
+                
+        </section>
+                                   
+             <div class="botones">
+                <button>Registrarme</button>
+                <button>Login</button>
+            </div>
+    </main>
+
+
+    <!-- Script de los iconos -->
+    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+</body>
+</html>

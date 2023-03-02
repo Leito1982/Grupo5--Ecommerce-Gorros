@@ -14,7 +14,9 @@ router.post('/create', upload.single('image'), productsController.store);
 router.get('/detail/:id/', productsController.detail); 
  
 router.get('/edit/:id/', adminMiddleware, productsController.edit); 
-router.put('/edit/:id/', upload.single('image'), productsController.update); 
+router.put('/edit/:id/', upload.single('image'), productsController.update);
+
+router.post('/search', productsController.search);
 
 router.get('/delete/:id/', productsController.confirmDelete)
 router.delete('/delete/:id/', adminMiddleware, productsController.destroy); 
