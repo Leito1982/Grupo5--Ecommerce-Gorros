@@ -92,6 +92,20 @@ const controller = {
         })
 
     },
+    processEdit: (req, res) => {
+        //Validaciones
+    const errors = validationResult(req);
+        
+    if(errors.errors.length > 0){
+        Users.findByPk(req.params.id)
+        .then(user => {
+            
+            res.render('./users/edit', { errors: errors.mapped(), oldData: req.body, user: user});
+        })
+    }else{
+
+    }
+    },
 
     logout: (req, res) => {
         res.clearCookie('userEmail');
