@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('../partials/head', {title: 'Editar Perfil', style: '/css/styleProductCreate.css'}) %> 
+
+</head>
+
+<body >
+    <%- include ("../partials/header") %> 
+   
+    <main>
+        <h2> EDITAR PERFIL </h2>
+        
+            <p class="p2"> Modifique los datos que desee cambiar </p><br>
+            
+            <form action="/users/edit/<%= user.id %>" method="POST" enctype="multipart/form-data">
+
+                <div class="form-control">
+                    <label for="firstName">Nombre:</label>
+                    <input type="text" name="firstName" class="txt-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>">
+                </div>
+                <% if (locals.errors && errors.firstName) { %>
+                    <div class="text-danger">
+                        <%= errors.firstName.msg %> 
+                    </div>
+                <% } %>
+                <div class="form-control">
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" name="lastName" class="txt-control">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="txt-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+                </div>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                                                
+                <div class="form-control">
+                    <label for="image">Fotos de perfil:</label>
+                    <input type="file" name="image" accept="image/*">
+                </div>
+    
+                <div class="botones">
+                    <button type="submit">Guardar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+
+</main>
+
+       <!-- Script de los iconos -->
+    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -15,6 +15,9 @@ router.post('/login', usersController.processLogin);
 
 router.get('/profile', authMiddleware, usersController.profile);
 
+router.get('/edit/:id/', usersController.edit)
+//router.put('/edit/:id/', upload.single('image'), usersController.processEdit)
+
 router.get('/logout', usersController.logout);
 
 module.exports = router;

@@ -85,6 +85,14 @@ const controller = {
         res.render('./users/profile', { user: req.session.userLogged})
     },
 
+    edit: (req, res) => {
+        Users.findByPk(req.params.id)
+        .then(user => {
+            res.render('./users/edit', { user: user})
+        })
+
+    },
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
