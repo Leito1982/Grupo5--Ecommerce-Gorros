@@ -12,11 +12,11 @@ function userLogged (req, res, next) {
 
         res.locals.isLogged = req.session.userLogged
 
-        // if (req.session.userEdit) {
+            if (req.session.userEdit) {
 
-        //     res.locals.isLogged = req.session.userEdit;
+             res.locals.isLogged = req.session.userEdit;
            
-        // }
+            }
         return next();
 
     } else if (req.cookies.userEmail) {

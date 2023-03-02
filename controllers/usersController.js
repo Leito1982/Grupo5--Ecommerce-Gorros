@@ -102,8 +102,40 @@ const controller = {
             
             res.render('./users/edit', { errors: errors.mapped(), oldData: req.body, user: user});
         })
+
     }else{
 
+        let userToEdit  = Users.findByPk(req.params.id);            
+        let img
+		if(req.file != undefined){
+			img = req.file.filename
+		} else {
+			img = userToEdit.image
+		}
+
+        Users.update(
+            {
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                email: req.body.email,
+                image: img
+            },
+            {
+                where: {id: req.params.id},
+            }
+        )
+        .then(result => {
+            Users.findOne({
+                where: {id: req.params.id},
+                include: [{association: 'level'}]
+            })
+            .then(userEdited => {
+                req.session.userEdit = userEdited.dataValues
+                
+                res.redirect('/');
+            })
+            
+        })
     }
     },
 
