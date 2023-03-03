@@ -171,7 +171,9 @@ span {
     text-align: center;
 
 }
-
+h4 {
+    color: #faf3e3;
+}
 /********************KEYFRAMES**********************************/
 
 @keyframes mueve-carrousel {

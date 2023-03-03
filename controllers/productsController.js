@@ -105,18 +105,24 @@ const controller = {
         })
 	},
 	search: (req, res) => {
-
-        Products.findAll({
-            where: {
-                name: {
-                    [Op.like]: '%'+req.body.searchTxt+'%'
-                  }    
-            }
-        })
-        .then(products => {
-            
-            res.render('./products/products', {products: products});
+		if(req.body.searchTxt){
+			Products.findAll({
+				where: {
+					name: {[Op.like]: '%'+req.body.searchTxt+'%'}    
+				}
+        	})
+        	.then(products => {
+				if(products.length > 0) {
+					res.render('./products/products', {products: products, mensaje:''});
+				}else{
+					res.render('./products/products', {products: products, mensaje:'Lo sentimos no contamos con el producto \"'+req.body.searchTxt+'\" que esta buscando'});
+				}
             })
+		}else{
+		    res.render('./products/products', {mensaje: 'Por favor ingrese un producto para buscar'});
+		}
+
+        
         },
 
 	confirmDelete: (req, res) => {
