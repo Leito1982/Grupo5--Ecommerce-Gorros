@@ -29,6 +29,11 @@
                     <label for="lastName">Apellido:</label>
                     <input type="text" name="lastName" class="txt-control">
                 </div>
+                <% if (locals.errors && errors.lastName) { %>
+                    <div class="text-danger">
+                        <%= errors.lastName.msg %> 
+                    </div>
+                <% } %>
                 <div class="form-control">
                     <label for="email">Email:</label>
                     <input type="email" name="email" class="txt-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
@@ -49,8 +54,13 @@
                 <% } %>                                
                 <div class="form-control">
                     <label for="image">Fotos de perfil:</label>
-                    <input type="file" name="image" accept="image/*">
+                    <input type="file" name="image">
                 </div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>     
     
                 <div class="botones">
                     <button type="submit">Guardar</button>
