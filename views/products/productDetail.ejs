@@ -34,7 +34,7 @@
         
         <div class="botones">
             <a class="button" href="Comprar">Comprar</a>
-            <a class="button" href="/productCart">Agregar al Carrito</a>
+            <button class="button" onclick="agregarAlCarrito()">Agregar al Carrito</button>
             
             <% if (locals.isLogged && locals.isLogged.level.level == 'Admin') { %>
                 <form action="/products/delete/<%=product.id%>" method="GET">
@@ -48,6 +48,7 @@
 
     <%- include ("../partials/footer") %> 
     
+    <script src="../../public/js/carrito.js"></script>
     <!-- Script de los iconos -->
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 </body>
