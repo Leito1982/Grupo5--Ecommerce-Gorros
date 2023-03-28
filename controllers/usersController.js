@@ -33,24 +33,7 @@ const controller = {
         let img
   
         if(req.file != undefined){
-            // if (req.file.mimetype == "image/jpg"){
-                img = req.file.filename
-            // } else {
-            //     return res.render('./users/register', { errors: { image: { msg: 'La imagen debe tener alguno de los siguientes formatos: JPG, JPEG, PNG o GIF'}}, oldData: req.body});
-            // }
-
-//             // Array of allowed files
-// const array_of_allowed_files = ['png', 'jpeg', 'jpg', 'gif'];
-
-// // Get the extension of the uploaded file
-// const file_extension = image.originalname.slice(
-//     ((image.originalname.lastIndexOf('.') - 1) >>> 0) + 2
-// );
-
-// // Check if the uploaded file is allowed
-// if (!array_of_allowed_files.includes(file_extension)) {
-//   throw Error('Invalid file');
-
+            img = req.file.filename
         } else {
             img = 'userImage-default.png'
         }       
