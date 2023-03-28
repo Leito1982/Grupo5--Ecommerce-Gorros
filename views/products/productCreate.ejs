@@ -13,11 +13,21 @@
             <label for="name">Nombre del Producto:</label>
             <input type="text" name="name" class="txt-control">
         </div>
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger">
+                <%= errors.name.msg %> 
+            </div>
+        <% } %>   
 
         <div class="form-control">
             <label for="description">Descripción:</label>
             <textarea name="description" cols="30" rows="10" class="txt-control"></textarea>
         </div>
+        <% if (locals.errors && errors.description) { %>
+            <div class="text-danger">
+                <%= errors.description.msg %> 
+            </div>
+        <% } %>   
 
         <div class="form-control">
             <label for="image">Fotos del producto:</label>
