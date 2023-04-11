@@ -15,6 +15,7 @@ const controller = {
 
     //Validaciones
     const errors = validationResult(req);
+    console.log(errors)
         
     if(errors.errors.length > 0){
 
