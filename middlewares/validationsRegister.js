@@ -21,7 +21,9 @@ const validationsRegister = [
       if (!acceptedExtensions.includes(fileExtension)) {
         throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
       }
+    
     }
+    return true;
   })
 ]
 
