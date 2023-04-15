@@ -33,6 +33,11 @@
             <label for="image">Fotos del producto:</label>
             <input type="file" name="image" accept="image/*">
         </div>
+        <% if (locals.errors && errors.image) { %>
+            <div class="text-danger">
+                <%= errors.image.msg %> 
+            </div>
+        <% } %>     
 
         <div class="form-control">
             <label for="price">Precio:</label>

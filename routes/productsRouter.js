@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer')
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const validationsProducts =require('../middlewares/validationsProducts')
 
 const productsController = require('../controllers/productsController');
   
@@ -9,7 +10,7 @@ const productsController = require('../controllers/productsController');
 router.get('/', productsController.index);  
  
 router.get('/create', adminMiddleware, productsController.create); 
-router.post('/create', upload.single('image'), productsController.store); 
+router.post('/create', upload.single('image'), [validationsProducts], productsController.store); 
 
 router.get('/detail/:id/', productsController.detail); 
  
