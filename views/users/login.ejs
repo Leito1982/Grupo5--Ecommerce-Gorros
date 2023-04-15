@@ -32,6 +32,11 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" class="form-input">
             </div>
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
             <div class="form-camp">
                 <label for="rememberUser" class="form-label">Recordarme</label>
                 <input type="checkbox" name="rememberUser" class="form-input-remember">

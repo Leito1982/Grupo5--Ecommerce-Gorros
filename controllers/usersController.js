@@ -56,6 +56,14 @@ const controller = {
     },
 
     processLogin: (req, res) => {
+        //Validaciones
+    const errors = validationResult(req);
+    console.log(errors)
+        
+    if(errors.errors.length > 0){
+
+        res.render('./users/login', { errors: errors.mapped(), oldData: req.body});
+    }else{
 
         Users.findOne({
             where: {email: req.body.email},
@@ -80,8 +88,9 @@ const controller = {
             }
 
             return res.render('./users/login', {errors: {email: {msg: 'El email no es correcto'}}})
-        }) 
-    },
+        })
+    } 
+},
 
     profile: (req, res) => {
         res.render('./users/profile', { user: req.session.userLogged})
