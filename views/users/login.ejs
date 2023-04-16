@@ -17,11 +17,16 @@
     <h2> INICIO DE SESION </h2>
     
     <p> Bienvenido de vuelta! Ingresa tus datos para iniciar sesion.</p>
-
+            <section class="errores">
+                <ul>
+                
+                </ul>
+            </section>
         <form action="/users/login" method="POST">
+            
             <div class="form-camp">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-input" value="<%= locals.oldData ? oldData.email : null %>">
+                <input type="email" name="email" id="email" class="form-input" value="<%= locals.oldData ? oldData.email : null %>">
             </div>
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
@@ -30,7 +35,7 @@
             <% } %>
             <div class="form-camp">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-input">
+                <input type="password" name="password" id="password" class="form-input">
             </div>
             <% if (locals.errors && errors.password) { %>
                 <div class="text-danger">
@@ -51,6 +56,7 @@
     <!-- Script de los iconos -->
 
 <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+<script src="/js/validationsFrontLogin.js"></script>
 
 </body>
 
