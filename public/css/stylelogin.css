@@ -89,11 +89,12 @@ form {
     text-decoration: none;
     text-align: center;
 }
-.input-error-email, .input-error-password {
-    display: none;   
+.input-error {
+   color: red; 
+   display: none;   
 }
-.input-error-email-active, .input-error-password-active {
-    color: red;
+.input-error-active {
+    display: block;
 }
 
 .text-danger {
