@@ -5,7 +5,7 @@ window.onload = function () {
   const inputs = document.querySelectorAll('#formulario .form-camp input');
   const expresiones = {
     email: /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i,
-    password: /^.{8,30}$/
+    password: /^.{8,40}$/
     }
   const campos = {
     email: false,

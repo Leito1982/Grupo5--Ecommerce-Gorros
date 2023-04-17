@@ -60,6 +60,13 @@ form {
     border-radius: 5px;
     width: 96px;
 }
+.input-error {
+    color: red; 
+    display: none;   
+ }
+ .input-error-active {
+     display: block;
+ }
 .text-danger {
     color: red;
 }
