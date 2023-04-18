@@ -89,6 +89,13 @@ form {
     text-decoration: none;
     text-align: center;
 }
+.input-error {
+   color: red; 
+   display: none;   
+}
+.input-error-active {
+    display: block;
+}
 
 .text-danger {
     color: red;

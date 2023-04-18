@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { validationResult } = require('express-validator');
 
 //Otra forma de llamar a los modelos
 const Products = db.Product;
@@ -28,6 +29,7 @@ const controller = {
 
 	// formulario crear producto
 	create: (req, res) => {
+
 		let promCategory = Category.findAll();
 		let promSize = Size.findAll();
 
@@ -39,6 +41,21 @@ const controller = {
 	
 	// crear producto guardar
 	store: (req, res) => {
+
+		//Validaciones
+		const errors = validationResult(req);
+		console.log(errors)
+			
+		if(errors.errors.length > 0){
+			
+			let promCategory = Category.findAll();
+		let promSize = Size.findAll();
+
+		Promise.all([promCategory, promSize])
+            .then(([categories, sizes]) => {
+			res.render('./products/productCreate', { categories: categories, sizes: sizes, errors: errors.mapped(), oldData: req.body});
+			})
+		}else{
 
 		let img
 
@@ -59,7 +76,7 @@ const controller = {
 		.then(product => {
             res.redirect('/')
         });
-
+	}
 	},
 
 	// formulario editar producto
