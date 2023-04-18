@@ -19,7 +19,7 @@ const validationsProducts = [
     
     }
     return true;
-  })
+  }),
 
   body('image').custom((value, { req }) => {
     let file = req.file;
