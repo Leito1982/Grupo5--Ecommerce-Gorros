@@ -16,11 +16,12 @@ const validationsRegister = [
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg', '.webp'];
     
-    if (file) {
+
+    if (!file.value == undefined) {
       let fileExtension = path.extname(file.originalname);
       if (!acceptedExtensions.includes(fileExtension)) {
         throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-      }
+      } 
     }
   })
 ]

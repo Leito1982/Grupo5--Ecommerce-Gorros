@@ -27,7 +27,7 @@
                 <% } %>
                 <div class="form-control">
                     <label for="lastName">Apellido:</label>
-                    <input type="text" name="lastName" class="txt-control">
+                    <input type="text" name="lastName" class="txt-control" <%= locals.errors && errors.lastName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.lastName : null %>">
                 </div>
                 <% if (locals.errors && errors.lastName) { %>
                     <div class="text-danger">
