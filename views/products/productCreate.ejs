@@ -11,7 +11,7 @@
 
         <div class="form-control">
             <label for="name">Nombre del Producto:</label>
-            <input type="text" name="name" class="txt-control">
+            <input type="text" name="name" class="txt-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.name : null %>">
         </div>
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
@@ -21,7 +21,7 @@
 
         <div class="form-control">
             <label for="description">Descripción:</label>
-            <textarea name="description" cols="30" rows="10" class="txt-control"></textarea>
+            <textarea name="description" cols="30" rows="10" class="txt-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
         </div>
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">

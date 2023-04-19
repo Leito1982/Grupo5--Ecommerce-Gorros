@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer');
 const validationsRegister = require('../middlewares/validationsRegister');
-const validationsUserEdit = require('../middlewares/validationsUserEdit');
 const validationsLogin = require('../middlewares/validationsLogin');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -19,7 +18,7 @@ router.post('/login', validationsLogin, usersController.processLogin);
 router.get('/profile', authMiddleware, usersController.profile);
 
 router.get('/edit/:id/', authUserSessionMiddleware, usersController.edit)
-router.put('/edit/:id/', upload.single('image'), [validationsUserEdit], usersController.processEdit)
+router.put('/edit/:id/', upload.single('image'), usersController.processEdit)
 
 router.get('/logout', usersController.logout);
 
