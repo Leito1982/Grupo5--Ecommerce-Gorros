@@ -3,7 +3,6 @@ const router = express.Router();
 const upload = require('../middlewares/multer')
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const validationsProducts =require('../middlewares/validationsProducts')
-const validationsProductEdit =require('../middlewares/validationsProductEdit')
 const productsController = require('../controllers/productsController');
   
 
@@ -15,7 +14,7 @@ router.post('/create', upload.single('image'), [validationsProducts], productsCo
 router.get('/detail/:id/', productsController.detail); 
  
 router.get('/edit/:id/', adminMiddleware, productsController.edit); 
-router.put('/edit/:id/', upload.single('image'), [validationsProductEdit], productsController.update);
+router.put('/edit/:id/', upload.single('image'), productsController.update);
 
 router.post('/search', productsController.search);
 
