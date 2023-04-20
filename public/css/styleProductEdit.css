@@ -40,6 +40,14 @@ form {
     border-radius: 5px;
 }
 
+.input-error {
+    color: red; 
+    display: none;   
+ }
+ .input-error-active {
+     display: block;
+ }
+
 .botones {
     display: flex;
     justify-content:center;

@@ -10,11 +10,11 @@ window.onload = function () {
         imagen: /^.*\.(jpg|gif|png|jpeg|webp)$/
     }
     const campos = {
-        nombre: false,
-        apellido: false,
+        firstName: false,
+        lastName: false,
         email: false,
         password: false,
-        imagen: false
+        image: false
     }
     //funcion para validar el formulario, un caso para cada input  
   const validarFormulario = (e) => {
@@ -68,7 +68,7 @@ window.onload = function () {
   //evento submit del formulario
   formulario.addEventListener('submit', (e) => {
     
-    if (campos.nombre == false || campos.apellido == false || campos.email == false || campos.password == false || campos.imagen == false) {
+    if (campos.firstName == false || campos.lastName == false || campos.email == false || campos.password == false || campos.image == false) {
       e.preventDefault();
     }
       

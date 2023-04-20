@@ -9,9 +9,10 @@
     <h2>Crear Producto</h2>
     <form id="formulario" action="/products/create" method="POST" enctype="multipart/form-data">
 
-        <div class="form-control">
+        <div class="form-control" id="camp-name">
             <label for="name">Nombre del Producto:</label>
             <input type="text" name="name" class="txt-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.name : null %>">
+            <p class="input-error">El campo Nombre del Producto es obligatorio y debe tener al menos 5 caracteres</p>
         </div>
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
@@ -19,9 +20,10 @@
             </div>
         <% } %>   
 
-        <div class="form-control">
+        <div class="form-control" id="camp-description">
             <label for="description">Descripción:</label>
-            <textarea name="description" cols="30" rows="10" class="txt-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
+            <textarea id="description" name="description" cols="30" rows="10" class="txt-control  <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
+            <p class="input-error">El campo Descripción debe tener al menos 20 caracteres</p>
         </div>
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
@@ -29,9 +31,10 @@
             </div>
         <% } %>   
 
-        <div class="form-control">
+        <div class="form-control" id="camp-image">
             <label for="image">Fotos del producto:</label>
-            <input type="file" name="image" accept="image/*">
+            <input type="file" name="image">
+            <p class="input-error">la Foto del producto debe ser de alguno de los siguientes formatos: .jpg, .gif, .png, .jpeg o .webp</p>
         </div>
 
         <div class="form-control">

@@ -9,19 +9,22 @@
     <h2>Editar Producto</h2>
     <form id="formulario" action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-        <div class="form-control">
+        <div class="form-control" id="camp-name">
             <label for="name">Nombre del Producto:</label>
             <input type="text" name="name" value="<%= product.name %> " class="txt-control">
+            <p class="input-error">El campo Nombre del Producto es obligatorio y debe tener al menos 5 caracteres</p>
         </div>
 
-        <div class="form-control">
+        <div class="form-control" id="camp-description">
             <label for="description">Descripción:</label>
             <textarea name="description" class="txt-control"><%= product.description %></textarea>
+            <p class="input-error">El campo Descripción debe tener al menos 20 caracteres</p>
         </div>
 
-        <div class="form-control">
+        <div class="form-control" id="camp-image">
             <label for="image">Fotos del producto:</label>
             <input type="file" name="image" accept="image/*">
+            <p class="input-error">la Foto del producto debe ser de alguno de los siguientes formatos: .jpg, .gif, .png, .jpeg o .webp</p>
         </div>
 
         <div class="form-control">
