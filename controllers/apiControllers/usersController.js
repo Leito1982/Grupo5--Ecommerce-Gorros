@@ -2,7 +2,9 @@ const db = require('../../dataBase/models');
 
 const usersAPIController = {
     list: (req, res) => {
-        db.User.findAll()
+        db.User.findAll({
+            attributes: ['id', 'first_name', 'email']
+          })
 
         .then(users => {
 
@@ -29,7 +31,9 @@ const usersAPIController = {
 
     detail: (req, res) => {
 
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.id, {
+            attributes: ['id', 'first_name', 'last_name', 'email', 'image']
+          })
 
         .then(user => {
 
