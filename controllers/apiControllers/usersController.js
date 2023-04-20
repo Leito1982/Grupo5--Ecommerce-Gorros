@@ -6,11 +6,11 @@ const usersAPIController = {
 
         .then(users => {
 
-            let datos = [];
+            let data = [];
 
             users.forEach(user => {
 
-                datos.push({
+                data.push({
                     id: user.id,
                     name: user.first_name,
                     email: user.email,
@@ -20,11 +20,33 @@ const usersAPIController = {
 
             return res.status(200).json({
                 count: users.length,
-                users: datos,
+                users: data,
                 status: 200
             })
         })
 
+    },
+
+    detail: (req, res) => {
+
+        db.User.findByPk(req.params.id)
+
+        .then(user => {
+
+            const data = {
+                id: user.id,
+                name: user.first_name,
+                surname: user.last_name,
+                email: user.email,
+                image: `http://localhost:3000/images/users/${user.image}`
+            }
+            return res.status(200).json({
+                users: data,
+                status: 200
+            })
+                    
+        })
     }
 }
+
 module.exports = usersAPIController;
