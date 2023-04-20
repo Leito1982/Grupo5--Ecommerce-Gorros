@@ -7,7 +7,7 @@
     <%- include ("../partials/header") %> 
     
     <h2>Editar Producto</h2>
-    <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form id="formulario" action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <div class="form-control">
             <label for="name">Nombre del Producto:</label>
@@ -93,5 +93,6 @@
 
     <!-- Script de los iconos -->
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+    <script src="/js/validationsFrontProduct.js"></script>
 </body>
 </html>
