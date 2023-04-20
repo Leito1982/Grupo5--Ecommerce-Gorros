@@ -11,6 +11,7 @@ router.get('/users/:id/', usersAPIController.detail);
 
 //Listado de todos los productos
 router.get('/products', productsAPIController.list);
-
+//Detalle de un producto
+router.get('/products/:id/', productsAPIController.detail);
 
 module.exports = router;
