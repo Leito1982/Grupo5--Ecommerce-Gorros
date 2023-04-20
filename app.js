@@ -9,6 +9,7 @@ const app = express();
 const mainRouter = require("./routes/mainRouter");
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
+const apiRouter = require("./routes/apiRouter");
 
 // Middleware
 app.set('view engine', 'ejs');
@@ -29,6 +30,7 @@ app.use(express.static("public"));
 app.use ("/", mainRouter)
 app.use ("/products", productsRouter)
 app.use ("/users", usersRouter)
+app.use ("/api", apiRouter)
 
 
 app.use((req, res, next) => {
