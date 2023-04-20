@@ -1,6 +1,6 @@
 const { body } = require('express-validator');
 
-const validationsProducts = [
+const validationsProductEdit = [
 
   body('name').notEmpty().withMessage('El campo "nombre de producto" es obligatorio')
     .isLength({ min: 5 }).withMessage('El campo "nombre de producto" debe tener al menos 5 caracteres'),
@@ -20,8 +20,7 @@ const validationsProducts = [
     }
     return true;
   })
-
  
   ]
 
-  module.exports =validationsProducts;
+  module.exports =validationsProductEdit;
