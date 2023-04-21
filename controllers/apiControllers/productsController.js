@@ -29,7 +29,7 @@ const productsAPIController = {
                         id: product.id,
                         name: product.name,
                         description: product.description,
-                        categories: categories,// esto no iria afuera??
+                        
                         detail: `http://localhost:3000/api/products/${product.id}`
                     });
 
@@ -46,10 +46,12 @@ const productsAPIController = {
                 return res.status(200).json({
                     count: products.length,
                     countByCategory: productsByCategory,
+                    categories: categories,
                     products: dataProducts,
                     status: 200
                 });
-            });
+            })
+            .catch(error => console.log(error))
     },
 
     detail: (req, res) => {
@@ -75,7 +77,7 @@ const productsAPIController = {
             })
 
         })
-
+        .catch(error => console.log(error))
 
     }
 

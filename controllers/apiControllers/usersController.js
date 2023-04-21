@@ -26,7 +26,7 @@ const usersAPIController = {
                 status: 200
             })
         })
-
+        .catch(error => console.log(error))
     },
 
     detail: (req, res) => {
@@ -50,6 +50,7 @@ const usersAPIController = {
             })
                     
         })
+        .catch(error => console.log(error))
     }
 }
 
