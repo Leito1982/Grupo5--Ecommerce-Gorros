@@ -37,7 +37,7 @@ form {
 .form-control label {
     width: 40%;
 }
-  .txt-control {
+.form-control .txt-control {
     width: 60%;
     border: solid 1px #1a4d2e;
     border-radius: 5px;
