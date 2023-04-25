@@ -3,6 +3,7 @@ const methodOverride =  require('method-override')
 const session = require('express-session');
 const cookieParser = require('cookie-parser')
 const userLogged = require('./middlewares/userLogged');
+const cors = require('cors');
 
 const app = express();
 
@@ -24,6 +25,9 @@ app.use(session({
 app.use(cookieParser());
 app.use(userLogged);
 
+const whitelist = ['http://localhost:3000/'];
+app.use(cors(whitelist));
+
 app.use(express.static("public"));
 
 // Rutas
@@ -38,5 +42,5 @@ app.use((req, res, next) => {
   });
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.log ("Servidor corriendo en el puerto " + port));
