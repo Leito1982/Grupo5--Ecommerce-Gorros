@@ -202,6 +202,9 @@ header nav {
     border-radius: 5px;
     width: 96px;
 }
+.botones a {
+    text-decoration: none;
+}
 
 
 /* --- Footer --- */
