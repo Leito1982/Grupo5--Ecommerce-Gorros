@@ -23,7 +23,7 @@
             <div class="form-camp" id="camp-email">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" id="email" class="form-input" value="<%= locals.oldData ? oldData.email : null %>">
-                <p class="input-error">El campo email es obligatorio y debe ser un formato de email válido</p>
+                <span class="input-error">El campo email es obligatorio y debe ser un formato de email válido</span>
             </div>
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
@@ -33,7 +33,7 @@
             <div class="form-camp" id="camp-password">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" id="password" class="form-input">
-                <p class="input-error">El campo password es obligatorio y debe tener un mínimo de 8 caracteres</p>
+                <span class="input-error">El campo password es obligatorio y debe tener un mínimo de 8 caracteres</span>
             </div>
             <% if (locals.errors && errors.password) { %>
                 <div class="text-danger">

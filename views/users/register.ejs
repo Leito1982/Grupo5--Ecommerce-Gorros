@@ -16,7 +16,7 @@
                 <div class="form-control" id="camp-firstName">
                     <label for="firstName">Nombre:</label>
                     <input type="text" name="firstName" class="txt-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>">
-                    <p class="input-error">El campo Nombre es obligatorio y debe tener al menos 2 caracteres</p>
+                    <span class="input-error">El campo Nombre es obligatorio y debe tener al menos 2 caracteres</span>
                 </div>
                 <% if (locals.errors && errors.firstName) { %>
                     <div class="text-danger">
@@ -26,7 +26,7 @@
                 <div class="form-control" id="camp-lastName">
                     <label for="lastName">Apellido:</label>
                     <input type="text" name="lastName" class="txt-control" <%= locals.errors && errors.lastName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.lastName : null %>">
-                    <p class="input-error">El campo Apellido es obligatorio y debe tener al menos 2 caracteres</p>
+                    <span class="input-error">El campo Apellido es obligatorio y debe tener al menos 2 caracteres</span>
                 </div>
                 <% if (locals.errors && errors.lastName) { %>
                     <div class="text-danger">
@@ -36,7 +36,7 @@
                 <div class="form-control" id="camp-email">
                     <label for="email">Email:</label>
                     <input type="email" name="email" class="txt-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
-                    <p class="input-error">El campo email es obligatorio y debe ser un formato de email válido</p>
+                    <span class="input-error">El campo email es obligatorio y debe ser un formato de email válido</span>
                 </div>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -46,7 +46,7 @@
                 <div class="form-control" id="camp-password">
                     <label for="password">Password:</label>
                     <input type="password" name="password" class="txt-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
-                    <p class="input-error">El campo password es obligatorio y debe tener un mínimo de 8 caracteres</p>
+                    <span class="input-error">El campo password es obligatorio y debe tener un mínimo de 8 caracteres</span>
                 </div>
                 <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
@@ -56,7 +56,7 @@
                 <div class="form-control" id="camp-image">
                     <label for="image">Fotos de perfil:</label>
                     <input type="file" name="image">
-                    <p class="input-error">la Foto de perfil debe ser de alguno de los siguientes formatos: .jpg, .gif, .png, .jpeg o .webp</p>
+                    <span class="input-error">la Foto de perfil debe ser de alguno de los siguientes formatos: .jpg, .gif, .png, .jpeg o .webp</span>
                 </div>
                 <% if (locals.errors && errors.image) { %>
                     <div class="text-danger">
